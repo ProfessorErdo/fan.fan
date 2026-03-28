@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Selection Intelligence | Portfolio Project</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Geospatial Analytics · Retail Intelligence · Multi-Target Prediction</span>
+            <h1 class="hero-title">Site Selection<br>Intelligence System</h1>
+            <p class="hero-subtitle">
+                A geospatial ML platform that predicts store performance using population, traffic, and points-of-interest data to optimize retail expansion decisions
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">9</span>
+                    <span class="stat-label">Distance Aggregations</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">50+</span>
+                    <span class="stat-label">Geospatial Features</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">2</span>
+                    <span class="stat-label">Simultaneous Targets</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-accent"></div>
+    </header>
+
+    <main>
+        <!-- Business Impact -->
+        <section id="business-value" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Business Impact</span>
+                    <h2 class="section-title">Why This Matters</h2>
+                    <p class="section-subtitle">
+                        Transforming retail site selection from experience-based intuition to data-driven precision
+                    </p>
+                </div>
+                <div class="value-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <h3>Optimized Expansion</h3>
+                        <p>
+                            Opening new stores is a high-stakes decision. This system predicts economic performance based on geospatial data, enabling confident investment decisions and reducing the risk of underperforming locations.
+                        </p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+                                <line x1="8" y1="2" x2="8" y2="18"/>
+                                <line x1="16" y1="6" x2="16" y2="22"/>
+                            </svg>
+                        </div>
+                        <h3>Geographic Intelligence</h3>
+                        <p>
+                            Leverage rich geospatial data—population density, traffic patterns, competitor locations, shopping malls, and sports facilities—to understand the business potential of every living area across top cities.
+                        </p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                            </svg>
+                        </div>
+                        <h3>Performance Forecasting</h3>
+                        <p>
+                            Predict both total turnover (TO) and turnover per square meter (TO/SQM) simultaneously, enabling optimal sales area investment decisions and maximizing return on real estate spend.
+                        </p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <h3>Visual Decision Support</h3>
+                        <p>
+                            Driver weights are integrated into a GIS system to visualize business potentials geographically. Tableau dashboards display predicted performance across different sales area scenarios.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenge Section -->
+        <section id="challenge" class="section">
+            <div class="container">
+                <div class="challenge-content">
+                    <div class="challenge-text">
+                        <span class="section-tag">The Problem</span>
+                        <h3 class="challenge-title">The Complexity of Site Selection</h3>
+                        <p>
+                            Retail site selection has traditionally relied on expert experience and limited data. Predicting the economic performance of a new store location requires understanding complex interactions between geographic, demographic, and competitive factors that vary dramatically across different areas and distances.
+                        </p>
+                        <p>
+                            The challenge is compounded by multiple factors: varying catchment area definitions (3km, 5km, 10-minute drive, living area), diverse data sources (population grids, traffic counts, POI data), and the need to predict multiple performance metrics simultaneously.
+                        </p>
+                        <ul class="challenge-list">
+                            <li><span class="challenge-marker">✕</span> Experience-based decisions lack quantitative rigor</li>
+                            <li><span class="challenge-marker">✕</span> Difficulty aggregating multi-source geospatial data</li>
+                            <li><span class="challenge-marker">✕</span> No systematic way to compare location potential</li>
+                            <li><span class="challenge-marker">✕</span> Inability to predict performance across different area investments</li>
+                            <li><span class="challenge-marker">✕</span> Missing visualization tools for geographic business intelligence</li>
+                        </ul>
+                    </div>
+                    <div class="challenge-visual">
+                        <h4 class="visual-title">Catchment Area Analysis</h4>
+                        <div class="pareto-diagram">
+                            <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid meet">
+                                <!-- Grid background -->
+                                <defs>
+                                    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                                        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1a2744" stroke-width="0.5"/>
+                                    </pattern>
+                                </defs>
+                                <rect width="400" height="220" fill="url(#grid)"/>
+                                <!-- Store location -->
+                                <circle cx="200" cy="110" r="6" fill="#c9a962" stroke="#2e4061" stroke-width="2"/>
+                                <!-- Catchment zones -->
+                                <circle cx="200" cy="110" r="40" fill="none" stroke="#c9a962" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+                                <circle cx="200" cy="110" r="70" fill="none" stroke="#c9a962" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+                                <circle cx="200" cy="110" r="100" fill="none" stroke="#c9a962" stroke-width="1" stroke-dasharray="4,4" opacity="0.3"/>
+                                <!-- POIs -->
+                                <circle cx="150" cy="80" r="4" fill="#c9a962" opacity="0.7"/>
+                                <circle cx="250" cy="70" r="4" fill="#c9a962" opacity="0.7"/>
+                                <circle cx="280" cy="130" r="4" fill="#c9a962" opacity="0.7"/>
+                                <circle cx="140" cy="150" r="4" fill="#c9a962" opacity="0.7"/>
+                                <circle cx="220" cy="160" r="4" fill="#2e4061" opacity="0.7"/>
+                                <circle cx="170" cy="60" r="4" fill="#2e4061" opacity="0.7"/>
+                                <circle cx="260" cy="150" r="4" fill="#1a2744" opacity="0.7"/>
+                                <circle cx="130" cy="100" r="4" fill="#1a2744" opacity="0.7"/>
+                                <!-- Labels -->
+                                <text x="200" y="105" fill="#c9a962" font-size="8" text-anchor="middle">Store</text>
+                                <text x="250" y="75" fill="#c9a962" font-size="7" text-anchor="middle">Mall</text>
+                                <text x="230" y="175" fill="#2e4061" font-size="7" text-anchor="middle">Traffic</text>
+                                <text x="270" y="145" fill="#1a2744" font-size="7" text-anchor="middle">Competitor</text>
+                            </svg>
+                        </div>
+                        <div class="diagram-labels">
+                            <span class="diagram-label">3km Circle</span>
+                            <span class="diagram-label">5km Circle</span>
+                            <span class="diagram-label">10min Drive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Flow -->
+        <section id="solution" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">The Solution</span>
+                    <h2 class="section-title">A Data-Driven Approach</h2>
+                    <p class="section-subtitle">
+                        End-to-end geospatial ML pipeline that transforms location data into actionable site selection insights
+                    </p>
+                </div>
+                <div class="solution-flow">
+                    <div class="flow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Multi-Distance Aggregation</h4>
+                            <p>Aggregate geospatial data into 9 different catchment definitions: 250m grids, 3km/5km circles, 10-min drive areas, and living areas (LA)</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Feature Engineering</h4>
+                            <p>Create 50+ features from POI data (competitors, malls, sports facilities), population demographics, and hourly traffic patterns</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Driver Weight Calculation</h4>
+                            <p>Use Lasso regression to calculate feature importance weights, identifying key drivers of store performance for GIS visualization</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Feature Selection</h4>
+                            <p>Apply permutation importance with XGBoost/LightGBM/CatBoost to identify the most predictive features, removing noise</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Multi-Target Prediction</h4>
+                            <p>Train models to predict TO and TO/SQM simultaneously using XGBoost/CatBoost with Optuna hyperparameter optimization (200 trials)</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h4>Performance Visualization</h4>
+                            <p>Generate Tableau dashboards and GIS visualizations showing predicted performance across different sales area investments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Architecture -->
+        <section id="architecture" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">System Design</span>
+                    <h2 class="section-title">Technical Architecture</h2>
+                    <p class="section-subtitle">
+                        Modular pipeline with three core functions: weight calculation, single-output prediction, and multi-target prediction
+                    </p>
+                </div>
+                <div class="architecture-grid">
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7 10 12 15 17 10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                            </div>
+                            <h4>Data Sources</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>POI Data:</strong> Competitors, malls, sports</li>
+                            <li><strong>Population:</strong> Demographics, income, age</li>
+                            <li><strong>Traffic:</strong> Hourly foot traffic patterns</li>
+                            <li><strong>Store Data:</strong> Internal performance metrics</li>
+                        </ul>
+                    </div>
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+                                    <line x1="8" y1="2" x2="8" y2="18"/>
+                                    <line x1="16" y1="6" x2="16" y2="22"/>
+                                </svg>
+                            </div>
+                            <h4>Distance Aggregation</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>250M:</strong> Grid-based (250m × 250m)</li>
+                            <li><strong>3KM/5KM:</strong> Circular catchment</li>
+                            <li><strong>10MIN:</strong> Drive-time polygon</li>
+                            <li><strong>LA:</strong> Living area boundaries</li>
+                            <li><strong>Combined:</strong> Hybrid aggregations</li>
+                        </ul>
+                    </div>
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2a10 10 0 1 0 10 10"/>
+                                    <path d="M12 12l4-4"/>
+                                    <path d="M12 2v4"/>
+                                    <path d="M22 12h-4"/>
+                                </svg>
+                            </div>
+                            <h4>Model Training</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>Weight Calc:</strong> Lasso regression</li>
+                            <li><strong>Single Output:</strong> XGB/CatBoost (TO or TO/SQM)</li>
+                            <li><strong>Multi-Target:</strong> Simultaneous prediction</li>
+                            <li><strong>Optimization:</strong> Optuna TPE (200 trials)</li>
+                        </ul>
+                    </div>
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <h4>Output & Visualization</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>Driver Weights:</strong> CSV for GIS integration</li>
+                            <li><strong>Predictions:</strong> TO and TO/SQM by area</li>
+                            <li><strong>Intervals:</strong> Confidence ranges</li>
+                            <li><strong>Dashboards:</strong> Tableau visualization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pipeline Section -->
+        <section id="pipeline" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Implementation</span>
+                    <h2 class="section-title">Data Pipeline</h2>
+                    <p class="section-subtitle">
+                        Six-stage processing pipeline from raw geospatial data to site selection recommendations
+                    </p>
+                </div>
+                <div class="pipeline-timeline">
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 0: Data Collection</h4>
+                            <p>Gather external data (POI, population, traffic) and internal store performance data for top 30 Chinese cities</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 1: Preprocessing</h4>
+                            <p>Clean and standardize data: impute missing values, standardize city names and building types, calculate store age and sales area ratio, create city tiers</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 2: Distance Aggregation</h4>
+                            <p>Aggregate geospatial data into 9 distance definitions: 250M, 3KM, 5KM, 10MIN, LA, and 4 combined variants (poi+population at distance + traffic in 250m grids)</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 3: Feature Selection</h4>
+                            <p>Train base models, calculate permutation importance, rank features by importance, remove low-importance features and random noise features</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 4: Model Training</h4>
+                            <p>Optuna hyperparameter optimization (200 trials, TPE sampler), 5-fold stratified CV, early stopping (100 rounds), save best models for each distance × model combination</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 5: Prediction & Reporting</h4>
+                            <p>Generate predictions for existing stores (TO, TO/SQM, intervals), predict new store performance, create consolidated reports, export to Tableau dashboards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section - Key Predictors -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Feature Engineering</span>
+                    <h2 class="section-title">Key Predictors</h2>
+                    <p class="section-subtitle">
+                        Features engineered from geospatial data to capture location potential and market dynamics
+                    </p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-column">
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <polyline points="9 22 9 12 15 12 15 22"/>
+                                </svg>
+                                Points of Interest
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">num_shopping_malls</span>
+                                        <span class="feature-desc">Count of shopping malls in catchment area</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">num_competitors</span>
+                                        <span class="feature-desc">Total competitor stores (Nike, Adidas, Anta, etc.)</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">num_sports_facilities</span>
+                                        <span class="feature-desc">Sports venues (gyms, pools, courts)</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">num_metro_lines / stations</span>
+                                        <span class="feature-desc">Public transport accessibility</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                                Population Demographics
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">home_pop / work_pop</span>
+                                        <span class="feature-desc">Residential and workplace population</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">level_1_8_income_pop</span>
+                                        <span class="feature-desc">Population by 8 income levels</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">age_19_29_ratio to age_50_64_ratio</span>
+                                        <span class="feature-desc">Population distribution across 6 age groups</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">male_ratio / female_ratio</span>
+                                        <span class="feature-desc">Gender distribution</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-column">
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                Traffic Patterns
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">hourly_traffic_0-23</span>
+                                        <span class="feature-desc">Hourly foot traffic counts (24 features)</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">peak_hour_traffic</span>
+                                        <span class="feature-desc">Maximum hourly traffic volume</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">avg_daily_traffic</span>
+                                        <span class="feature-desc">Mean traffic across all hours</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">traffic_variance</span>
+                                        <span class="feature-desc">Traffic pattern stability measure</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Store Attributes
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">sales_area</span>
+                                        <span class="feature-desc">Total retail floor space (sqm)</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">store_age</span>
+                                        <span class="feature-desc">Years since store opening</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">city_tier</span>
+                                        <span class="feature-desc">City classification (Tier 1-4)</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">building_type</span>
+                                        <span class="feature-desc">Shopping mall, street store, etc.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section id="tech-stack" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Technology</span>
+                    <h2 class="section-title">Tech Stack</h2>
+                    <p class="section-subtitle">
+                        Python-based geospatial ML stack for site selection
+                    </p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">🐍</div>
+                        <div class="tech-name">Python</div>
+                        <div class="tech-version">3.x</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📈</div>
+                        <div class="tech-name">XGBoost</div>
+                        <div class="tech-version">Gradient Boosting</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🐱</div>
+                        <div class="tech-name">CatBoost</div>
+                        <div class="tech-version">Categorical GB</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔧</div>
+                        <div class="tech-name">Optuna</div>
+                        <div class="tech-version">Hyperparameter Opt</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📊</div>
+                        <div class="tech-name">pandas</div>
+                        <div class="tech-version">Data Manip.</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🗺️</div>
+                        <div class="tech-name">GIS</div>
+                        <div class="tech-version">Geographic Viz</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📉</div>
+                        <div class="tech-name">Tableau</div>
+                        <div class="tech-version">Dashboards</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">☁️</div>
+                        <div class="tech-name">ODPS</div>
+                        <div class="tech-version">Data Warehouse</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    © 2026 Site Selection Intelligence. Built for Decathlon China expansion strategy.
+                </p>
+                <div class="footer-links">
+                    <a href="resume.html">← Back to Resume</a>
+                    <a href="#business-value">Impact</a>
+                    <a href="#solution">Solution</a>
+                    <a href="#features">Predictors</a>
+                    <a href="#tech-stack">Tech</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

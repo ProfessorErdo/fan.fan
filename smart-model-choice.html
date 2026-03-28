@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Model Choice | Portfolio Project</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Deep Learning · Sequence Modeling · Product Recommendation</span>
+            <h1 class="hero-title">Smart Model<br>Choice System</h1>
+            <p class="hero-subtitle">
+                A transformer-based recommendation engine that predicts optimal product models for customers using purchase sequence modeling and city-specific patterns
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">32</span>
+                    <span class="stat-label">Max Sequence</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">1.5M</span>
+                    <span class="stat-label">Training Samples</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">10</span>
+                    <span class="stat-label">City Clusters</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-accent"></div>
+    </header>
+
+    <main>
+        <!-- Business Impact -->
+        <section id="business-value" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Business Impact</span>
+                    <h2 class="section-title">Why This Matters</h2>
+                    <p class="section-subtitle">
+                        Transforming product recommendations from static rules to intelligent sequence prediction
+                    </p>
+                </div>
+                <div class="value-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2a10 10 0 1 0 10 10"/>
+                                <path d="M12 12l4-4"/>
+                                <path d="M12 2v4"/>
+                                <path d="M22 12h-4"/>
+                            </svg>
+                        </div>
+                        <h3>AI-Powered Recommendations</h3>
+                        <p>
+                            Leverage transformer-based deep learning to understand customer purchase patterns. Predict the next best model for each customer based on their purchase history and similar customer sequences.
+                        </p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                        </div>
+                        <h3>City-Specific Intelligence</h3>
+                        <p>
+                            Each city has unique preferences and buying patterns. Train separate models for Beijing, Nanjing, Hangzhou, and other cities to capture local market dynamics and cultural preferences.
+                        </p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                                <polyline points="16 7 22 7 22 13"/>
+                            </svg>
+                        </div>
+                        <h3>Top & Flop Analysis</h3>
+                        <p>
+                            Identify top-performing models for recommendation and flop models to avoid. Generate actionable insights for inventory planning and markdown strategies.
+                        </p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <h3>Store Missing Summary</h3>
+                        <p>
+                            Analyze gaps between recommended models and listed inventory. Identify opportunities to improve store assortment and capture missed sales potential.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenge Section -->
+        <section id="challenge" class="section">
+            <div class="container">
+                <div class="challenge-content">
+                    <div class="challenge-text">
+                        <span class="section-tag">The Problem</span>
+                        <h3 class="challenge-title">The Limitation of Rule-Based Recommendations</h3>
+                        <p>
+                            Traditional product recommendations rely on static rules, collaborative filtering, or simple association mining. These approaches fail to capture temporal patterns in customer behavior, sequential dependencies, and city-specific preferences.
+                        </p>
+                        <p>
+                            Customers don't buy products in isolation—their purchases form sequences with meaningful patterns. Understanding these sequences requires sophisticated deep learning models that can handle long-range dependencies and contextual information.
+                        </p>
+                        <ul class="challenge-list">
+                            <li><span class="challenge-marker">✕</span> Static rules miss temporal purchase patterns</li>
+                            <li><span class="challenge-marker">✕</span> One-size-fits-all models ignore city differences</li>
+                            <li><span class="challenge-marker">✕</span> No understanding of purchase sequence context</li>
+                            <li><span class="challenge-marker">✕</span> Difficulty handling variable-length histories</li>
+                            <li><span class="challenge-marker">✕</span> Flop model identification is reactive, not proactive</li>
+                        </ul>
+                    </div>
+                    <div class="challenge-visual">
+                        <h4 class="visual-title">Purchase Sequence Modeling</h4>
+                        <div class="pareto-diagram">
+                            <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
+                                <!-- Sequence boxes -->
+                                <rect x="20" y="80" width="50" height="40" fill="#c9a962" rx="4"/>
+                                <rect x="90" y="80" width="50" height="40" fill="#c9a962" rx="4" opacity="0.8"/>
+                                <rect x="160" y="80" width="50" height="40" fill="#c9a962" rx="4" opacity="0.6"/>
+                                <rect x="230" y="80" width="50" height="40" fill="#c9a962" rx="4" opacity="0.4"/>
+                                <rect x="300" y="80" width="50" height="40" fill="#2e4061" rx="4" stroke="#c9a962" stroke-width="3"/>
+                                <!-- Arrows -->
+                                <path d="M 70 100 L 90 100" stroke="#1a2744" stroke-width="2"/>
+                                <path d="M 140 100 L 160 100" stroke="#1a2744" stroke-width="2"/>
+                                <path d="M 210 100 L 230 100" stroke="#1a2744" stroke-width="2"/>
+                                <path d="M 280 100 L 300 100" stroke="#1a2744" stroke-width="2"/>
+                                <!-- Labels -->
+                                <text x="45" y="70" fill="#c9a962" font-size="9" text-anchor="middle">Model 1</text>
+                                <text x="115" y="70" fill="#c9a962" font-size="9" text-anchor="middle">Model 2</text>
+                                <text x="185" y="70" fill="#c9a962" font-size="9" text-anchor="middle">Model 3</text>
+                                <text x="255" y="70" fill="#c9a962" font-size="9" text-anchor="middle">Model 4</text>
+                                <text x="325" y="70" fill="#2e4061" font-size="9" text-anchor="middle">Predict</text>
+                                <text x="200" y="150" fill="#1a2744" font-size="10" text-anchor="middle">Purchase Sequence → Next Model Prediction</text>
+                            </svg>
+                        </div>
+                        <div class="diagram-labels">
+                            <span class="diagram-label">t-3</span>
+                            <span class="diagram-label">t-2</span>
+                            <span class="diagram-label">t-1</span>
+                            <span class="diagram-label">t</span>
+                            <span class="diagram-label">t+1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Flow -->
+        <section id="solution" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">The Solution</span>
+                    <h2 class="section-title">A Deep Learning Approach</h2>
+                    <p class="section-subtitle">
+                        Transformer-based sequence modeling for intelligent product recommendations
+                    </p>
+                </div>
+                <div class="solution-flow">
+                    <div class="flow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Query Top Models by City</h4>
+                            <p>Extract top-selling models by city from transaction data with quantity and turnover thresholds (qty≥20, to≥10000)</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Build Purchase Sequences</h4>
+                            <p>Construct customer purchase sequences from transaction history, tokenize model codes, pad/truncate to max length 32</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Train Transformer Model</h4>
+                            <p>Custom GPT-style architecture: 256 embedding dim, 2 attention heads, 2 layers, vocab size 12,424 (model codes + special tokens)</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>City-Specific Training</h4>
+                            <p>Train separate models per city (Beijing, Nanjing, Hangzhou) with 1.5M samples, 90/10 train/val split</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Generate Recommendations</h4>
+                            <p>Predict next model probabilities for each customer, rank by likelihood, generate top-N recommendations</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h4>Flop Analysis & Missing Summary</h4>
+                            <p>Identify underperforming models, analyze store-level gaps between recommended and listed inventory</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Architecture -->
+        <section id="architecture" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">System Design</span>
+                    <h2 class="section-title">Technical Architecture</h2>
+                    <p class="section-subtitle">
+                        End-to-end deep learning pipeline for sequence-based product recommendation
+                    </p>
+                </div>
+                <div class="architecture-grid">
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7 10 12 15 17 10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                            </div>
+                            <h4>Data Sources</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>Transactions:</strong> Member-level purchases</li>
+                            <li><strong>Model List:</strong> Listed models by store</li>
+                            <li><strong>Tree View:</strong> Product hierarchy</li>
+                            <li><strong>Life Stage:</strong> Model lifecycle phase</li>
+                        </ul>
+                    </div>
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-3.77 3.77a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1 7.94 7.94l-3.77 3.77a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77"/>
+                                </svg>
+                            </div>
+                            <h4>Sequence Processing</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>Tokenization:</strong> Model code → token ID</li>
+                            <li><strong>Max Length:</strong> 32 time steps</li>
+                            <li><strong>Padding:</strong> &lt;PAD&gt; token</li>
+                            <li><strong>Separation:</strong> &lt;SEP&gt; token</li>
+                        </ul>
+                    </div>
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2a10 10 0 1 0 10 10"/>
+                                    <path d="M12 12l4-4"/>
+                                    <path d="M12 2v4"/>
+                                    <path d="M22 12h-4"/>
+                                </svg>
+                            </div>
+                            <h4>Model Architecture</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>Embedding:</strong> 256 dimensions</li>
+                            <li><strong>Attention:</strong> 2 heads, 2 layers</li>
+                            <li><strong>Vocab Size:</strong> 12,424 tokens</li>
+                            <li><strong>Drop Rate:</strong> 0.0 (no dropout)</li>
+                        </ul>
+                    </div>
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <h4>Output & Analysis</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>Recommendations:</strong> Top-N models per customer</li>
+                            <li><strong>Flop Stats:</strong> Underperforming models</li>
+                            <li><strong>Missing Summary:</strong> Store-level gaps</li>
+                            <li><strong>City Reports:</strong> Localized insights</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pipeline Section -->
+        <section id="pipeline" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Implementation</span>
+                    <h2 class="section-title">Data Pipeline</h2>
+                    <p class="section-subtitle">
+                        Six-stage processing pipeline from raw transactions to recommendations
+                    </p>
+                </div>
+                <div class="pipeline-timeline">
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 1: Process Listed Models</h4>
+                            <p>Extract and process listed model files by city, prepare model inventory data for training and validation</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 2: Extract Model Lists</h4>
+                            <p>Query top models by city from transaction database with quantity and turnover filters, extract for Beijing/Nanjing/Hangzhou</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 3: Build Sequences</h4>
+                            <p>Construct purchase sequences from member transactions, tokenize model codes, create training/validation datasets (1.5M samples)</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 4: Train Models</h4>
+                            <p>Train city-specific transformer models with PyTorch, 90/10 train/val split, save model weights to models directory</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 5: Generate Recommendations</h4>
+                            <p>Load trained models, predict next model probabilities for customers, generate ranked recommendation lists</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 6: Analysis & Reporting</h4>
+                            <p>Query flop models, generate store missing summary, analyze store performance, create city-specific reports</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section - Model & Configuration -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Key Features</span>
+                    <h2 class="section-title">Model & Configuration</h2>
+                    <p class="section-subtitle">
+                        Architecture details and city-specific configurations
+                    </p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-column">
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2a10 10 0 1 0 10 10"/>
+                                    <path d="M12 12l4-4"/>
+                                    <path d="M12 2v4"/>
+                                    <path d="M22 12h-4"/>
+                                </svg>
+                                Transformer Architecture
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Embedding Dimension: 256</span>
+                                        <span class="feature-desc">Model code and position embeddings</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Attention Heads: 2</span>
+                                        <span class="feature-desc">Multi-head self-attention mechanism</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Transformer Layers: 2</span>
+                                        <span class="feature-desc">Stacked encoder blocks</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Context Length: 32</span>
+                                        <span class="feature-desc">Maximum purchase sequence length</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Vocab Size: 12,424</span>
+                                        <span class="feature-desc">Unique model codes + &lt;PAD&gt; + &lt;SEP&gt;</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <polyline points="9 22 9 12 15 12 15 22"/>
+                                </svg>
+                                City Configuration
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Beijing</span>
+                                        <span class="feature-desc">19 stores, Spring: Feb 26 - Jun 3, Summer: Jun 3 - Aug 26</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Nanjing</span>
+                                        <span class="feature-desc">8 stores, Spring: Feb 12 - May 6, Summer: May 6 - Aug 26</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Hangzhou</span>
+                                        <span class="feature-desc">7 stores, Spring: Feb 12 - May 6, Summer: May 6 - Aug 26</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Season Definitions</span>
+                                        <span class="feature-desc">City-specific season start/end dates for 2024SS, 2024AW, 2025SS, 2025AW</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-column">
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <line x1="18" y1="20" x2="18" y2="10"/>
+                                    <line x1="12" y1="20" x2="12" y2="4"/>
+                                    <line x1="6" y1="20" x2="6" y2="14"/>
+                                </svg>
+                                Training Configuration
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Train/Val Split: 90/10</span>
+                                        <span class="feature-desc">1.35M training, 150K validation samples</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">City Label Probs</span>
+                                        <span class="feature-desc">Chengdu: [7.2%, 9.2%, 10.9%, 10.0%, 7.1%, 17.9%, 12.1%, 6.1%, 13.5%, 6.0%]</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Store Label Probs</span>
+                                        <span class="feature-desc">Per-store probability distributions for evaluation</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Random Seed: 123</span>
+                                        <span class="feature-desc">Reproducible training and evaluation</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                                    <polyline points="16 7 22 7 22 13"/>
+                                </svg>
+                                Analysis Modules
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Flop Model Query</span>
+                                        <span class="feature-desc">Identify underperforming models by sales metrics</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Store Missing Summary</span>
+                                        <span class="feature-desc">Gap analysis between recommended and listed models</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Store Performance Review</span>
+                                        <span class="feature-desc">Multi-dimensional store performance analysis</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Sports Turnover by Living Area</span>
+                                        <span class="feature-desc">Geographic performance analysis</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section id="tech-stack" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Technology</span>
+                    <h2 class="section-title">Tech Stack</h2>
+                    <p class="section-subtitle">
+                        Deep learning stack for sequence modeling and recommendation
+                    </p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">🐍</div>
+                        <div class="tech-name">Python</div>
+                        <div class="tech-version">3.x</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔥</div>
+                        <div class="tech-name">PyTorch</div>
+                        <div class="tech-version">Deep Learning</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📊</div>
+                        <div class="tech-name">pandas</div>
+                        <div class="tech-version">Data Manip.</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔢</div>
+                        <div class="tech-name">NumPy</div>
+                        <div class="tech-version">Numerical</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🗜️</div>
+                        <div class="tech-name">scikit-learn</div>
+                        <div class="tech-version">ML Toolkit</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">☁️</div>
+                        <div class="tech-name">ODPS</div>
+                        <div class="tech-version">Data Warehouse</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📓</div>
+                        <div class="tech-name">Jupyter</div>
+                        <div class="tech-version">Analysis</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🗄️</div>
+                        <div class="tech-name">SQL</div>
+                        <div class="tech-version">Data Query</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    © 2026 Smart Model Choice. Built for Decathlon China product recommendation.
+                </p>
+                <div class="footer-links">
+                    <a href="resume.html">← Back to Resume</a>
+                    <a href="#business-value">Impact</a>
+                    <a href="#solution">Solution</a>
+                    <a href="#features">Features</a>
+                    <a href="#tech-stack">Tech</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

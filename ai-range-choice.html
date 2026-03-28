@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Range Choice System | Portfolio Project</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Retail Intelligence · Assortment Optimization · Pareto Analysis</span>
+            <h1 class="hero-title">AI Range<br>Choice System</h1>
+            <p class="hero-subtitle">
+                A data-driven assortment planning system that recommends optimal product ranges
+                for retail stores using comparable store analysis and Pareto optimization
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">4</span>
+                    <span class="stat-label">Seasons/Year</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">Pareto</span>
+                    <span class="stat-label">80/20 Rule</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">Cosine</span>
+                    <span class="stat-label">Similarity Metric</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-accent"></div>
+    </header>
+
+    <main>
+        <!-- Business Value Section -->
+        <section id="business-value" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Business Impact</span>
+                    <h2 class="section-title">Why This Matters</h2>
+                    <p class="section-subtitle">
+                        Transforming retail assortment planning from manual guesswork to AI-driven precision
+                    </p>
+                </div>
+                <div class="value-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
+                            </svg>
+                        </div>
+                        <h3>Optimized Assortment</h3>
+                        <p>
+                            Replace manual range selection with data-driven recommendations.
+                            Each store receives a tailored product assortment based on performance
+                            patterns from comparable stores, maximizing turnover per linear meter.
+                        </p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                        </div>
+                        <h3>Store-Specific Planning</h3>
+                        <p>
+                            One size doesn't fit all. The system identifies 3-4 comparable stores
+                            for each target store using geospatial and business features, ensuring
+                            recommendations reflect local market dynamics.
+                        </p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                            </svg>
+                        </div>
+                        <h3>Pareto Optimization</h3>
+                        <p>
+                            Apply the 80/20 rule: identify the 20% of product families that drive
+                            80% of turnover. Focus shelf space on high-performing families while
+                            maintaining strategic diversity.
+                        </p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <h3>Seasonal Intelligence</h3>
+                        <p>
+                            Plan assortments for all four seasons (Spring, Summer, Autumn, Winter)
+                            with season-specific comparable stores and performance metrics,
+                            accounting for seasonal demand variations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenge Section -->
+        <section id="challenge" class="section">
+            <div class="container">
+                <div class="challenge-content">
+                    <div class="challenge-text">
+                        <span class="section-tag">The Problem</span>
+                        <h3 class="challenge-title">The Complexity of Range Planning</h3>
+                        <p>
+                            Retail assortment planning is a high-stakes decision affecting revenue,
+                            inventory costs, and customer satisfaction. Traditional approaches rely on
+                            manual analysis, historical intuition, and one-size-fits-all templates that
+                            fail to capture store-specific dynamics.
+                        </p>
+                        <p>
+                            The challenge is compounded by seasonal variations (different ranges for
+                            Spring/Summer vs. Autumn/Winter), space constraints (linear meter limits),
+                            and the need to balance iconic products with local preferences.
+                        </p>
+                        <ul class="challenge-list">
+                            <li><span class="challenge-marker">✕</span> Manual range selection lacks quantitative rigor</li>
+                            <li><span class="challenge-marker">✕</span> Different stores have different customer bases</li>
+                            <li><span class="challenge-marker">✕</span> Seasonal variations require separate planning</li>
+                            <li><span class="challenge-marker">✕</span> Space constraints (linear meters) must be respected</li>
+                            <li><span class="challenge-marker">✕</span> Compulsory products must be included regardless of performance</li>
+                        </ul>
+                    </div>
+                    <div class="challenge-visual">
+                        <h4 class="visual-title">Pareto Principle in Retail</h4>
+                        <div class="pareto-diagram">
+                            <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
+                                <!-- Axes -->
+                                <line x1="50" y1="20" x2="50" y2="170" stroke="#64748b" stroke-width="2"/>
+                                <line x1="50" y1="170" x2="370" y2="170" stroke="#64748b" stroke-width="2"/>
+                                <!-- Cumulative curve -->
+                                <path d="M 50 170 L 100 95 L 150 55 L 200 35 L 250 28 L 300 23 L 350 20"
+                                      fill="none" stroke="#c9a962" stroke-width="3"/>
+                                <!-- 80% line -->
+                                <line x1="50" y1="50" x2="370" y2="50" stroke="#2e4061" stroke-width="2" stroke-dasharray="8,4"/>
+                                <!-- 20% mark -->
+                                <line x1="150" y1="20" x2="150" y2="170" stroke="#2e4061" stroke-width="2" stroke-dasharray="8,4"/>
+                                <!-- Labels -->
+                                <text x="150" y="42" fill="#c9a962" font-size="12" font-weight="600" text-anchor="middle">80% Turnover</text>
+                                <text x="100" y="185" fill="#c9a962" font-size="11" font-weight="600" text-anchor="middle">20% Families</text>
+                                <text x="260" y="185" fill="#64748b" font-size="11" text-anchor="middle">80% Families (Low Priority)</text>
+                                <text x="30" y="95" fill="#64748b" font-size="11" text-anchor="middle" transform="rotate(-90, 30, 95)">Cumulative %</text>
+                            </svg>
+                        </div>
+                        <div class="diagram-labels">
+                            <span class="diagram-label">Vital Few</span>
+                            <span class="diagram-label">Useful Many</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section id="solution" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">The Solution</span>
+                    <h2 class="section-title">A Data-Driven Approach</h2>
+                    <p class="section-subtitle">
+                        End-to-end assortment planning pipeline from comparable store identification to final recommendations
+                    </p>
+                </div>
+                <div class="solution-flow">
+                    <div class="flow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Query Store Performance</h4>
+                            <p>Extract family-level turnover data by store and season from data warehouse, calculate turnover per linear meter per day</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Calculate Pareto & Range</h4>
+                            <p>For each store-season combination, calculate cumulative turnover percentage and identify families contributing to 80% of turnover</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Identify Comparable Stores</h4>
+                            <p>Find 3-4 most similar stores using cosine distance on external features (geospatial + POI + demographics + traffic)</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Generate Recommendations</h4>
+                            <p>Combine prioritized families from comparable stores, rank by turnover per linear meter, generate initial recommendations</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Apply Linear Meter Constraint</h4>
+                            <p>Constrain recommendations to fit store's total linear meter capacity (typically 60-70% of total LM to allow flexibility)</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h4>Apply Compulsory Matching</h4>
+                            <p>Enforce business rules: add mandatory product families (iconic products, strategic items) regardless of performance metrics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Section -->
+        <section id="architecture" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">System Design</span>
+                    <h2 class="section-title">Technical Architecture</h2>
+                    <p class="section-subtitle">
+                        Modular pipeline with six core components working in sequence
+                    </p>
+                </div>
+                <div class="architecture-grid">
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7 10 12 15 17 10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                            </div>
+                            <h4>Data Sources</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>Turnover Data:</strong> Family-level by store</li>
+                            <li><strong>Range Choice:</strong> Seasonal product ranges</li>
+                            <li><strong>Store Data:</strong> Linear meters, status</li>
+                            <li><strong>Comparable Stores:</strong> Pre-calculated similarity</li>
+                        </ul>
+                    </div>
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <line x1="18" y1="20" x2="18" y2="10"/>
+                                    <line x1="12" y1="20" x2="12" y2="4"/>
+                                    <line x1="6" y1="20" x2="6" y2="14"/>
+                                </svg>
+                            </div>
+                            <h4>Pareto Analysis</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>Cumulative %:</strong> Running turnover total</li>
+                            <li><strong>Threshold:</strong> 80% cutoff (configurable)</li>
+                            <li><strong>Priority:</strong> High-turnover families</li>
+                            <li><strong>Seasonal:</strong> Separate per season</li>
+                        </ul>
+                    </div>
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <circle cx="12" cy="12" r="6"/>
+                                    <circle cx="12" cy="12" r="2"/>
+                                </svg>
+                            </div>
+                            <h4>Recommendation Engine</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>Mode:</strong> Single or Multiple stores</li>
+                            <li><strong>Distance:</strong> Cosine similarity</li>
+                            <li><strong>Features:</strong> External all geo</li>
+                            <li><strong>Threshold:</strong> 0.8 cumulative</li>
+                        </ul>
+                    </div>
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-3.77 3.77a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1 7.94 7.94l-3.77 3.77a1 1 0 0 0 0 1.4l-1.6 1.6a1 1 0 0 0-1.4 0l-3.77-3.77a6 6 0 0 1-7.94-7.94l-3.77-3.77a1 1 0 0 0-1.4 0l-1.6-1.6a1 1 0 0 0 0-1.4l3.77-3.77a6 6 0 0 1 7.94-7.94l3.77-3.77z"/>
+                                </svg>
+                            </div>
+                            <h4>Post-Processing</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>LM Constraint:</strong> 60-70% of total</li>
+                            <li><strong>Compulsory:</strong> Mandatory families</li>
+                            <li><strong>Validation:</strong> Outlier analysis</li>
+                            <li><strong>Reports:</strong> Tableau-ready exports</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pipeline Section -->
+        <section id="pipeline" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Implementation</span>
+                    <h2 class="section-title">Data Pipeline</h2>
+                    <p class="section-subtitle">
+                        Six-stage processing pipeline from raw data to final recommendations
+                    </p>
+                </div>
+                <div class="pipeline-timeline">
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 1: Query Store Performance</h4>
+                            <p>Extract family turnover by store and season from warehouse, calculate turnover per linear meter per day metric</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 2: Combine Ranges & Performance</h4>
+                            <p>Join range choice data with performance metrics, calculate cumulative turnover percentage for Pareto analysis</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 3: Recommend Ranges</h4>
+                            <p>Load comparable stores (3-4 per target), extract prioritized families from all comparable stores, rank by performance</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 4: Apply LM Constraint</h4>
+                            <p>Calculate recommended linear meters vs. store total, apply constraint factor (0.6-0.7), remove lowest performers</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 5: Apply Compulsory Matching</h4>
+                            <p>Load compulsory matching list by season, add mandatory families, validate against business rules, remove invalid entries</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 6: Generate Reports</h4>
+                            <p>Export to CSV for Tableau dashboards, generate family tree view, perform outlier analysis, validate recommendations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Key Features</span>
+                    <h2 class="section-title">Recommendation Logic</h2>
+                    <p class="section-subtitle">
+                        How the system determines optimal product ranges for each store
+                    </p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-column">
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <polyline points="9 22 9 12 15 12 15 22"/>
+                                </svg>
+                                Comparable Store Selection
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Cosine Distance</span>
+                                        <span class="feature-desc">Similarity metric on external feature vectors</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">External All Geo</span>
+                                        <span class="feature-desc">POI + population + traffic + lat/long features</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Top 3-4 Stores</span>
+                                        <span class="feature-desc">Optimal number for diverse yet focused recommendations</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Manual Override</span>
+                                        <span class="feature-desc">Business-assigned comparables for special cases</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <line x1="18" y1="20" x2="18" y2="10"/>
+                                    <line x1="12" y1="20" x2="12" y2="4"/>
+                                    <line x1="6" y1="20" x2="6" y2="14"/>
+                                </svg>
+                                Pareto Optimization
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Cumulative Turnover %</span>
+                                        <span class="feature-desc">Running total of family contribution to store turnover</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">80% Threshold</span>
+                                        <span class="feature-desc">Families contributing to first 80% of turnover are prioritized</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Turnover per LM per Day</span>
+                                        <span class="feature-desc">Normalized performance metric for fair comparison</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-column">
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-3.77 3.77a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1 7.94 7.94l-3.77 3.77a1 1 0 0 0 0 1.4l-1.6 1.6a1 1 0 0 0-1.4 0l-3.77-3.77a6 6 0 0 1-7.94-7.94l-3.77-3.77a1 1 0 0 0-1.4 0l-1.6-1.6a1 1 0 0 0 0-1.4l3.77-3.77a6 6 0 0 1 7.94-7.94l3.77-3.77z"/>
+                                </svg>
+                                Constraint Application
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Linear Meter Ratio</span>
+                                        <span class="feature-desc">Recommended LM / Store Total LM (target: 0.6-0.7)</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Constraint Factor</span>
+                                        <span class="feature-desc">Adjustable parameter (default: 0.7) to control recommendation size</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Keep Iconic</span>
+                                        <span class="feature-desc">Preserve strategic product families regardless of performance</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Drop Invalid</span>
+                                        <span class="feature-desc">Remove families not in valid range choice list</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <polyline points="9 11 12 14 22 4"/>
+                                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                                </svg>
+                                Compulsory Matching
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Seasonal Lists</span>
+                                        <span class="feature-desc">Separate compulsory families for Spring, Summer, Autumn, Winter</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Family Tree View</span>
+                                        <span class="feature-desc">Hierarchical product structure for validation</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Business Rules</span>
+                                        <span class="feature-desc">Strategic products, national contracts, brand visibility</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech-stack" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Technology</span>
+                    <h2 class="section-title">Tech Stack</h2>
+                    <p class="section-subtitle">
+                        Python-based retail analytics stack for assortment optimization
+                    </p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">🐍</div>
+                        <div class="tech-name">Python</div>
+                        <div class="tech-version">3.x</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📊</div>
+                        <div class="tech-name">pandas</div>
+                        <div class="tech-version">Data Manip.</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔢</div>
+                        <div class="tech-name">NumPy</div>
+                        <div class="tech-version">Numerical</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📈</div>
+                        <div class="tech-name">scikit-learn</div>
+                        <div class="tech-version">Cosine Distance</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">☁️</div>
+                        <div class="tech-name">Alibaba ODPS</div>
+                        <div class="tech-version">Data Warehouse</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📉</div>
+                        <div class="tech-name">Tableau</div>
+                        <div class="tech-version">Dashboards</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📓</div>
+                        <div class="tech-name">Jupyter</div>
+                        <div class="tech-version">Analysis</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🗄️</div>
+                        <div class="tech-name">SQL</div>
+                        <div class="tech-version">Data Query</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" class="section cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Rebuild This Project?</h2>
+                    <p class="cta-text">
+                        This portfolio page contains sufficient detail to reconstruct the entire system.
+                        All source code, configuration files, and notebooks are available in the
+                        project repository.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary">View Documentation</a>
+                        <a href="#" class="btn btn-secondary">Explore Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    © 2026 AI Range Choice System. Built for Decathlon China assortment planning optimization.
+                </p>
+                <div class="footer-links">
+                    <a href="resume.html">← Back to Resume</a>
+                    <a href="#business-value">Business Value</a>
+                    <a href="#solution">Solution</a>
+                    <a href="#features">Features</a>
+                    <a href="#pipeline">Pipeline</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.value-card, .flow-step, .arch-card, .pipeline-item, .feature-category, .tech-item').forEach(el => {
+            el.classList.add('fade-in');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

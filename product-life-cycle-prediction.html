@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Life Cycle Prediction | Portfolio Project</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Machine Learning · Product Strategy · Data Science</span>
+            <h1 class="hero-title">Product Life Cycle<br>Prediction System</h1>
+            <p class="hero-subtitle">
+                An enterprise-grade ML platform that predicts product lifespan with 84% accuracy, enabling data-driven strategic planning for retail product portfolios
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">16.8K</span>
+                    <span class="stat-label">Products Analyzed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">84.3%</span>
+                    <span class="stat-label">Prediction Accuracy</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">3</span>
+                    <span class="stat-label">ML Models</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-accent"></div>
+    </header>
+
+    <main>
+        <!-- Business Impact -->
+        <section id="business-value" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Business Impact</span>
+                    <h2 class="section-title">Why This Matters</h2>
+                    <p class="section-subtitle">
+                        Transforming product lifecycle management from intuition-based decisions to data-driven strategy
+                    </p>
+                </div>
+                <div class="value-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                            </svg>
+                        </div>
+                        <h3>Strategic Planning</h3>
+                        <p>
+                            Accurately forecast when products will transition through lifecycle stages (Introduction → Growth → Maturity → Decline), enabling proactive inventory management and resource allocation.
+                        </p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <h3>Cost Optimization</h3>
+                        <p>
+                            Reduce waste and overstock by predicting product end-of-life, minimizing clearance losses and optimizing procurement cycles based on data-driven lifespan estimates.
+                        </p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <h3>Portfolio Management</h3>
+                        <p>
+                            Segment products by turnover patterns and seasonal behavior, identifying high-performers early and making informed decisions about product line extensions or discontinuations.
+                        </p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                                <polyline points="16 7 22 7 22 13"/>
+                            </svg>
+                        </div>
+                        <h3>Revenue Protection</h3>
+                        <p>
+                            Prevent stockouts of promising products and avoid over-investment in declining lines by understanding each product's trajectory from launch to end-of-life.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenge Section -->
+        <section id="challenge" class="section">
+            <div class="container">
+                <div class="challenge-content">
+                    <div class="challenge-text">
+                        <span class="section-tag">The Problem</span>
+                        <h3 class="challenge-title">The Limitation of Traditional PLC Frameworks</h3>
+                        <p>
+                            The Product Life Cycle (PLC) framework is a cornerstone of strategic marketing and product management. However, its practical utility is severely limited by a critical gap: the inability to accurately predict <em>when</em> products transition between stages.
+                        </p>
+                        <p>
+                            Traditional approaches rely on manual analysis, historical analogies, or simple heuristics—methods that fail to capture the complex patterns in modern retail data.
+                        </p>
+                        <ul class="challenge-list">
+                            <li><span class="challenge-marker">✕</span> Subjective assessments lead to inconsistent predictions</li>
+                            <li><span class="challenge-marker">✕</span> Lack of quantitative metrics for lifecycle stage transitions</li>
+                            <li><span class="challenge-marker">✕</span> Inability to process large-scale turnover data efficiently</li>
+                            <li><span class="challenge-marker">✕</span> No systematic way to identify seasonal vs. structural patterns</li>
+                            <li><span class="challenge-marker">✕</span> Reactive rather than proactive decision-making</li>
+                        </ul>
+                    </div>
+                    <div class="challenge-visual">
+                        <h4 class="visual-title">Product Life Cycle Stages</h4>
+                        <div class="pareto-diagram">
+                            <svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMid meet">
+                                <!-- PLC curve -->
+                                <path d="M 0 160 Q 50 150, 80 120 T 150 50 T 220 40 T 300 70 T 380 140"
+                                      fill="none" stroke="#c9a962" stroke-width="2.5"/>
+                                <path d="M 0 160 Q 50 150, 80 120 T 150 50 T 220 40 T 300 70 T 380 140 L 380 160 Z"
+                                      fill="#c9a962" opacity="0.15"/>
+                                <!-- Stage markers -->
+                                <circle cx="80" cy="120" r="4" fill="#c9a962"/>
+                                <circle cx="150" cy="50" r="4" fill="#c9a962"/>
+                                <circle cx="220" cy="40" r="4" fill="#c9a962"/>
+                                <circle cx="300" cy="70" r="4" fill="#c9a962"/>
+                            </svg>
+                        </div>
+                        <div class="diagram-labels">
+                            <span class="diagram-label">Introduction</span>
+                            <span class="diagram-label">Growth</span>
+                            <span class="diagram-label">Maturity</span>
+                            <span class="diagram-label">Decline</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Flow -->
+        <section id="solution" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">The Solution</span>
+                    <h2 class="section-title">A Data-Driven Approach</h2>
+                    <p class="section-subtitle">
+                        End-to-end machine learning pipeline that transforms raw turnover data into actionable lifespan predictions
+                    </p>
+                </div>
+                <div class="solution-flow">
+                    <div class="flow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Pattern Recognition with DTW</h4>
+                            <p>Dynamic Time Warping measures similarity between product turnover curves, identifying products with similar lifecycle patterns regardless of timing variations</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Seasonal Intelligence</h4>
+                            <p>Quantifies seasonal intensity using variance decomposition, distinguishing between seasonal products (ski equipment) and year-round performers (basic apparel)</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Product Segmentation</h4>
+                            <p>K-means clustering groups products by turnover behavior, enabling the model to learn distinct lifecycle patterns for different product categories</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Predictive Modeling</h4>
+                            <p>Gradient boosting models (XGBoost, LightGBM, CatBoost) trained on engineered features predict lifespan with hyperparameter optimization via Optuna</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Interactive Dashboard</h4>
+                            <p>Streamlit-based visualization tool enables business users to explore predictions, view turnover trends, and understand model reasoning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Architecture -->
+        <section id="architecture" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">System Design</span>
+                    <h2 class="section-title">Technical Architecture</h2>
+                    <p class="section-subtitle">
+                        Modular, production-ready codebase with clear separation of concerns
+                    </p>
+                </div>
+                <div class="architecture-grid">
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7 10 12 15 17 10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                            </div>
+                            <h4>Data Loading</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>Input:</strong> 16M+ turnover records</li>
+                            <li><strong>Source:</strong> ODPS (Alibaba Cloud)</li>
+                            <li><strong>Format:</strong> Weekly aggregated sales</li>
+                        </ul>
+                    </div>
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="11" cy="11" r="8"/>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                </svg>
+                            </div>
+                            <h4>Feature Engineering</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>DTW Distance:</strong> Pattern similarity</li>
+                            <li><strong>Seasonal Intensity:</strong> Variance ratio</li>
+                            <li><strong>Cluster Labels:</strong> Product segments</li>
+                            <li><strong>Temporal Features:</strong> Date-derived</li>
+                        </ul>
+                    </div>
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2a10 10 0 1 0 10 10"/>
+                                    <path d="M12 12l4-4"/>
+                                    <path d="M12 2v4"/>
+                                    <path d="M22 12h-4"/>
+                                </svg>
+                            </div>
+                            <h4>Model Training</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>Algorithms:</strong> XGB, LGB, CatBoost</li>
+                            <li><strong>Optimization:</strong> Optuna TPE (50 trials)</li>
+                            <li><strong>Validation:</strong> Stratified 64/16/20 split</li>
+                            <li><strong>Early Stopping:</strong> 50 rounds</li>
+                        </ul>
+                    </div>
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <h4>Predictions</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>Output:</strong> Lifespan in weeks</li>
+                            <li><strong>Accuracy:</strong> RMSE 30.81, R² 0.843</li>
+                            <li><strong>Dashboard:</strong> Streamlit UI</li>
+                            <li><strong>Export:</strong> CSV, visualizations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pipeline Section -->
+        <section id="pipeline" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Implementation</span>
+                    <h2 class="section-title">Data Pipeline</h2>
+                    <p class="section-subtitle">
+                        Eight-stage processing pipeline from raw data to predictions
+                    </p>
+                </div>
+                <div class="pipeline-timeline">
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 0: Data Extraction</h4>
+                            <p>Load turnover data and product hierarchy from enterprise data warehouse (ODPS)</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 1: DTW Distance Calculation</h4>
+                            <p>Compute Dynamic Time Warping distances to mean and standard turnover curves for pattern recognition</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 2: Seasonal Intensity</h4>
+                            <p>Decompose time series and calculate intensity = var(seasonal) / var(raw), classify as weak/medium/strong</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 3: K-means Clustering</h4>
+                            <p>Segment products using DTW distances and intensity metrics, determine optimal k via elbow analysis</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 4: Feature Assembly</h4>
+                            <p>Merge all features, calculate lifespan from turnover curves, stratified split by cluster and typology</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 5: Model Training</h4>
+                            <p>Train gradient boosting models with Optuna hyperparameter optimization and early stopping</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 6: Prediction Generation</h4>
+                            <p>Apply best model to generate lifespan predictions for active products</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-item">
+                        <div class="pipeline-marker"></div>
+                        <div class="pipeline-content">
+                            <h4>Step 7: Dashboard Export</h4>
+                            <p>Prepare data for interactive Streamlit visualization with trend charts and feature breakdowns</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Performance</span>
+                    <h2 class="section-title">Model Results</h2>
+                    <p class="section-subtitle">
+                        Comprehensive evaluation across three gradient boosting algorithms
+                    </p>
+                </div>
+                <div class="results-grid">
+                    <div class="results-card featured">
+                        <h4>🏆 Best Performer: LightGBM</h4>
+                        <div class="metric">
+                            <span class="metric-value">30.81</span>
+                            <span class="metric-label">RMSE (weeks)</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">84.28%</span>
+                            <span class="metric-label">R² Score</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">11.77%</span>
+                            <span class="metric-label">MAPE</span>
+                        </div>
+                    </div>
+                    <div class="results-card">
+                        <h4>XGBoost Performance</h4>
+                        <div class="metric">
+                            <span class="metric-value">31.03</span>
+                            <span class="metric-label">RMSE (weeks)</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">84.05%</span>
+                            <span class="metric-label">R² Score</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">11.86%</span>
+                            <span class="metric-label">MAPE</span>
+                        </div>
+                    </div>
+                    <div class="results-card">
+                        <h4>CatBoost Performance</h4>
+                        <div class="metric">
+                            <span class="metric-value">30.86</span>
+                            <span class="metric-label">RMSE (weeks)</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">84.23%</span>
+                            <span class="metric-label">R² Score</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">11.78%</span>
+                            <span class="metric-label">MAPE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-table">
+                    <h4>Detailed Model Comparison</h4>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>RMSE</th>
+                                <th>MAE</th>
+                                <th>MAPE</th>
+                                <th>R²</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>LightGBM</td>
+                                <td class="best-value">30.81</td>
+                                <td class="best-value">22.59</td>
+                                <td class="best-value">11.77%</td>
+                                <td class="best-value">0.8428</td>
+                            </tr>
+                            <tr>
+                                <td>CatBoost</td>
+                                <td>30.86</td>
+                                <td>22.53</td>
+                                <td>11.78%</td>
+                                <td>0.8423</td>
+                            </tr>
+                            <tr>
+                                <td>XGBoost</td>
+                                <td>31.03</td>
+                                <td>22.82</td>
+                                <td>11.86%</td>
+                                <td>0.8405</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section - Key Predictors -->
+        <section id="features" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Feature Engineering</span>
+                    <h2 class="section-title">Key Predictors</h2>
+                    <p class="section-subtitle">
+                        Features engineered to capture product lifecycle patterns and seasonal behavior
+                    </p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-column">
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                                    <polyline points="16 7 22 7 22 13"/>
+                                </svg>
+                                Pattern Features
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">mean_distance</span>
+                                        <span class="feature-desc">DTW distance to average turnover curve</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">std_distance</span>
+                                        <span class="feature-desc">DTW distance to standard deviation curve</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">cluster_label</span>
+                                        <span class="feature-desc">K-means cluster assignment (0 to k-1)</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                Seasonal Features
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">seasonal_intensity</span>
+                                        <span class="feature-desc">var(seasonal) / var(raw) ratio</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">seasonal_class</span>
+                                        <span class="feature-desc">weak / medium / strong classification</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">peak_week</span>
+                                        <span class="feature-desc">Week of maximum seasonal effect</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-column">
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <line x1="18" y1="20" x2="18" y2="10"/>
+                                    <line x1="12" y1="20" x2="12" y2="4"/>
+                                    <line x1="6" y1="20" x2="6" y2="14"/>
+                                </svg>
+                                Turnover Features
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">total_turnover</span>
+                                        <span class="feature-desc">Cumulative sales over product lifetime</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">peak_turnover</span>
+                                        <span class="feature-desc">Maximum weekly turnover achieved</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">turnover_variance</span>
+                                        <span class="feature-desc">Sales volatility measure</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">weeks_to_peak</span>
+                                        <span class="feature-desc">Time from launch to peak sales</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <polyline points="9 22 9 12 15 12 15 22"/>
+                                </svg>
+                                Product Attributes
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">sport_family</span>
+                                        <span class="feature-desc">Product category (running, hiking, etc.)</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">typology</span>
+                                        <span class="feature-desc">Product type classification</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">price_range</span>
+                                        <span class="feature-desc">Price tier classification</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section id="tech-stack" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Technology</span>
+                    <h2 class="section-title">Tech Stack</h2>
+                    <p class="section-subtitle">
+                        Python-based ML stack for time series analysis and prediction
+                    </p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">🐍</div>
+                        <div class="tech-name">Python</div>
+                        <div class="tech-version">3.x</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📈</div>
+                        <div class="tech-name">XGBoost</div>
+                        <div class="tech-version">Gradient Boosting</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">⚡</div>
+                        <div class="tech-name">LightGBM</div>
+                        <div class="tech-version">Fast GB</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🐱</div>
+                        <div class="tech-name">CatBoost</div>
+                        <div class="tech-version">Categorical</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔧</div>
+                        <div class="tech-name">Optuna</div>
+                        <div class="tech-version">Hyperparameter Opt</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📊</div>
+                        <div class="tech-name">tslearn</div>
+                        <div class="tech-version">DTW Analysis</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📉</div>
+                        <div class="tech-name">Streamlit</div>
+                        <div class="tech-version">Dashboard</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">☁️</div>
+                        <div class="tech-name">ODPS</div>
+                        <div class="tech-version">Data Warehouse</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    © 2026 Product Life Cycle Prediction. Built for Decathlon China product strategy.
+                </p>
+                <div class="footer-links">
+                    <a href="resume.html">← Back to Resume</a>
+                    <a href="#business-value">Impact</a>
+                    <a href="#solution">Solution</a>
+                    <a href="#results">Results</a>
+                    <a href="#features">Predictors</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

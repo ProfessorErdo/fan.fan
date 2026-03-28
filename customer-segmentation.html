@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Segmentation | Portfolio Project</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Customer Analytics · K-Means Clustering · Business Intelligence</span>
+            <h1 class="hero-title">Customer<br>Segmentation</h1>
+            <p class="hero-subtitle">
+                A customer segmentation platform that identifies distinct shopper groups using K-Means clustering to enable targeted marketing and personalized experiences
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">K</span>
+                    <span class="stat-label">Optimal Clusters</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">PCA</span>
+                    <span class="stat-label">Dimensionality Reduction</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">Silhouette</span>
+                    <span class="stat-label">Quality Metric</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-accent"></div>
+    </header>
+
+    <main>
+        <!-- Business Impact -->
+        <section id="business-value" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Business Impact</span>
+                    <h2 class="section-title">Why This Matters</h2>
+                    <p class="section-subtitle">
+                        Transforming customer understanding from demographic stereotypes to behavior-based segments
+                    </p>
+                </div>
+                <div class="value-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <h3>Targeted Marketing</h3>
+                        <p>
+                            Move beyond one-size-fits-all campaigns. Each customer segment has distinct preferences, spending patterns, and product affinities. Tailor marketing messages and offers to resonate with each segment.
+                        </p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                            </svg>
+                        </div>
+                        <h3>Data-Driven Insights</h3>
+                        <p>
+                            Uncover hidden customer patterns through unsupervised learning. K-Means clustering reveals natural groupings based on actual purchase behavior, not assumptions.
+                        </p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                        </div>
+                        <h3>Store Strategy</h3>
+                        <p>
+                            Understand the customer composition of each store. Optimize assortment, layout, and staffing based on the dominant segments in each location's catchment area.
+                        </p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polyline points="23 4 23 10 17 10"/>
+                                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+                            </svg>
+                        </div>
+                        <h3>Personalization Engine</h3>
+                        <p>
+                            Power recommendation systems, personalized promotions, and custom experiences based on segment membership. Increase customer lifetime value through relevance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenge Section -->
+        <section id="challenge" class="section">
+            <div class="container">
+                <div class="challenge-content">
+                    <div class="challenge-text">
+                        <span class="section-tag">The Problem</span>
+                        <h3 class="challenge-title">The Limitation of Traditional Segmentation</h3>
+                        <p>
+                            Traditional customer segmentation relies on demographics (age, gender, location) or simple RFM (Recency, Frequency, Monetary) analysis. These approaches fail to capture the rich behavioral patterns in modern transaction data.
+                        </p>
+                        <p>
+                            Customers who look similar demographically may have completely different purchase behaviors. Conversely, customers from different demographics may share similar shopping patterns. Understanding true customer segments requires analyzing actual purchase behavior at the transaction level.
+                        </p>
+                        <ul class="challenge-list">
+                            <li><span class="challenge-marker">✕</span> Demographics don't predict purchase behavior</li>
+                            <li><span class="challenge-marker">✕</span> Manual segmentation is subjective and inconsistent</li>
+                            <li><span class="challenge-marker">✕</span> Difficulty handling high-dimensional behavioral data</li>
+                            <li><span class="challenge-marker">✕</span> No systematic way to determine optimal segment count</li>
+                            <li><span class="challenge-marker">✕</span> Segments become outdated without regular refresh</li>
+                        </ul>
+                    </div>
+                    <div class="challenge-visual">
+                        <h4 class="visual-title">Customer Segmentation Clusters</h4>
+                        <div class="pareto-diagram">
+                            <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
+                                <!-- Cluster circles -->
+                                <circle cx="100" cy="80" r="50" fill="#c9a962" opacity="0.3"/>
+                                <circle cx="250" cy="70" r="45" fill="#c9a962" opacity="0.25"/>
+                                <circle cx="180" cy="140" r="40" fill="#c9a962" opacity="0.2"/>
+                                <!-- Data points -->
+                                <circle cx="90" cy="70" r="3" fill="#c9a962"/>
+                                <circle cx="110" cy="85" r="3" fill="#c9a962"/>
+                                <circle cx="95" cy="95" r="3" fill="#c9a962"/>
+                                <circle cx="120" cy="75" r="3" fill="#c9a962"/>
+                                <circle cx="85" cy="80" r="3" fill="#c9a962"/>
+                                <circle cx="240" cy="65" r="3" fill="#2e4061"/>
+                                <circle cx="260" cy="75" r="3" fill="#2e4061"/>
+                                <circle cx="255" cy="55" r="3" fill="#2e4061"/>
+                                <circle cx="245" cy="80" r="3" fill="#2e4061"/>
+                                <circle cx="170" cy="135" r="3" fill="#1a2744"/>
+                                <circle cx="190" cy="145" r="3" fill="#1a2744"/>
+                                <circle cx="185" cy="130" r="3" fill="#1a2744"/>
+                                <!-- Cluster centers -->
+                                <circle cx="100" cy="80" r="5" fill="#c9a962" stroke="#fff" stroke-width="2"/>
+                                <circle cx="250" cy="70" r="5" fill="#2e4061" stroke="#fff" stroke-width="2"/>
+                                <circle cx="180" cy="140" r="5" fill="#1a2744" stroke="#fff" stroke-width="2"/>
+                                <!-- Labels -->
+                                <text x="100" y="40" fill="#c9a962" font-size="10" text-anchor="middle">Segment A</text>
+                                <text x="250" y="35" fill="#2e4061" font-size="10" text-anchor="middle">Segment B</text>
+                                <text x="180" y="185" fill="#1a2744" font-size="10" text-anchor="middle">Segment C</text>
+                            </svg>
+                        </div>
+                        <div class="diagram-labels">
+                            <span class="diagram-label">High-Value</span>
+                            <span class="diagram-label">Regular</span>
+                            <span class="diagram-label">Occasional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Flow -->
+        <section id="solution" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">The Solution</span>
+                    <h2 class="section-title">A Machine Learning Approach</h2>
+                    <p class="section-subtitle">
+                        K-Means clustering with PCA dimensionality reduction for customer segmentation
+                    </p>
+                </div>
+                <div class="solution-flow">
+                    <div class="flow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Query Transaction Data</h4>
+                            <p>Extract member transactions from data warehouse with date range and city filters, filter positive item amounts</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Feature Engineering</h4>
+                            <p>Aggregate transactions to member level: total spend, frequency, unique categories, average basket value, recency</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Data Preprocessing</h4>
+                            <p>Handle missing values, remove outliers, standardize features using StandardScaler for K-Means compatibility</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>PCA Dimensionality Reduction</h4>
+                            <p>Apply Principal Component Analysis to reduce dimensionality, visualize data in 2D/3D, retain 95% variance</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>K-Means Clustering</h4>
+                            <p>Find optimal K using elbow method and silhouette scores, run K-Means with 1000 iterations for convergence</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h4>Segment Profiling & Visualization</h4>
+                            <p>Profile each cluster with descriptive statistics, create visualizations with Missingno, Seaborn, and Matplotlib</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Architecture -->
+        <section id="architecture" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">System Design</span>
+                    <h2 class="section-title">Technical Architecture</h2>
+                    <p class="section-subtitle">
+                        End-to-end customer segmentation pipeline from raw transactions to actionable segments
+                    </p>
+                </div>
+                <div class="architecture-grid">
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7 10 12 15 17 10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                            </div>
+                            <h4>Data Sources</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>Transactions:</strong> Member-level purchases</li>
+                            <li><strong>Time Range:</strong> Configurable start/end dates</li>
+                            <li><strong>Geography:</strong> City-level filtering</li>
+                            <li><strong>Grain:</strong> Purchase sports ID or family ID</li>
+                        </ul>
+                    </div>
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-3.77 3.77a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1 7.94 7.94l-3.77 3.77a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77"/>
+                                </svg>
+                            </div>
+                            <h4>Preprocessing</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>Aggregation:</strong> Transaction → Member level</li>
+                            <li><strong>Scaling:</strong> StandardScaler normalization</li>
+                            <li><strong>Outliers:</strong> IQR-based removal</li>
+                            <li><strong>Missing:</strong> Imputation or removal</li>
+                        </ul>
+                    </div>
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <circle cx="12" cy="12" r="4"/>
+                                </svg>
+                            </div>
+                            <h4>Clustering Engine</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>Algorithm:</strong> K-Means</li>
+                            <li><strong>Iterations:</strong> 1,000 (guaranteed convergence)</li>
+                            <li><strong>Optimal K:</strong> Elbow + Silhouette analysis</li>
+                            <li><strong>Validation:</strong> Silhouette score</li>
+                        </ul>
+                    </div>
+                    <div class="arch-card">
+                        <div class="arch-card-header">
+                            <div class="arch-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <h4>Output & Analysis</h4>
+                        </div>
+                        <ul class="arch-list">
+                            <li><strong>Segment Profiles:</strong> Descriptive statistics per cluster</li>
+                            <li><strong>Visualizations:</strong> PCA plots, cluster scatter</li>
+                            <li><strong>Missing Data:</strong> Missingno matrix</li>
+                            <li><strong>Reports:</strong> City-specific insights</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section - Segmentation Methodology -->
+        <section id="features" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Key Features</span>
+                    <h2 class="section-title">Segmentation Methodology</h2>
+                    <p class="section-subtitle">
+                        Technical details of the clustering approach and configuration
+                    </p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-column">
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <line x1="18" y1="20" x2="18" y2="10"/>
+                                    <line x1="12" y1="20" x2="12" y2="4"/>
+                                    <line x1="6" y1="20" x2="6" y2="14"/>
+                                </svg>
+                                Feature Engineering
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Monetary Value</span>
+                                        <span class="feature-desc">Total transaction amount per member</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Frequency</span>
+                                        <span class="feature-desc">Number of transactions or unique sports purchased</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Recency</span>
+                                        <span class="feature-desc">Days since last purchase</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Category Diversity</span>
+                                        <span class="feature-desc">Unique product categories or sports purchased</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Average Basket</span>
+                                        <span class="feature-desc">Average transaction value</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="11" cy="11" r="8"/>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                </svg>
+                                Optimal K Selection
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Elbow Method</span>
+                                        <span class="feature-desc">Plot WCSS vs. K, find the "elbow" point</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Silhouette Score</span>
+                                        <span class="feature-desc">Measure cluster cohesion (-1 to +1)</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">K Range: 2-10</span>
+                                        <span class="feature-desc">Test multiple K values for optimal granularity</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-column">
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <circle cx="12" cy="12" r="4"/>
+                                </svg>
+                                K-Means Configuration
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Max Iterations: 1,000</span>
+                                        <span class="feature-desc">Ensure convergence for complex datasets</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Random State: 42</span>
+                                        <span class="feature-desc">Reproducible clustering results</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">N_Init: 'auto'</span>
+                                        <span class="feature-desc">Multiple centroid initializations</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">StandardScaler</span>
+                                        <span class="feature-desc">Normalize to zero mean and unit variance</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                                    <polyline points="16 7 22 7 22 13"/>
+                                </svg>
+                                Visualization & Analysis
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">PCA Decomposition</span>
+                                        <span class="feature-desc">Reduce to 2D/3D while retaining max variance</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Missingno Matrix</span>
+                                        <span class="feature-desc">Visualize missing data patterns</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Cluster Scatter Plots</span>
+                                        <span class="feature-desc">2D/3D scatter with cluster colors</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Silhouette Analysis</span>
+                                        <span class="feature-desc">Per-sample scores for cluster quality</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section id="tech-stack" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Technology</span>
+                    <h2 class="section-title">Tech Stack</h2>
+                    <p class="section-subtitle">
+                        Python-based analytics stack for customer segmentation
+                    </p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">🐍</div>
+                        <div class="tech-name">Python</div>
+                        <div class="tech-version">3.x</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📊</div>
+                        <div class="tech-name">pandas</div>
+                        <div class="tech-version">Data Manip.</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔢</div>
+                        <div class="tech-name">NumPy</div>
+                        <div class="tech-version">Numerical</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📈</div>
+                        <div class="tech-name">scikit-learn</div>
+                        <div class="tech-version">K-Means, PCA</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📉</div>
+                        <div class="tech-name">Seaborn</div>
+                        <div class="tech-version">Statistical Viz</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📊</div>
+                        <div class="tech-name">Matplotlib</div>
+                        <div class="tech-version">Visualization</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">☁️</div>
+                        <div class="tech-name">ODPS</div>
+                        <div class="tech-version">Data Warehouse</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📓</div>
+                        <div class="tech-name">Jupyter</div>
+                        <div class="tech-version">Analysis</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    © 2026 Customer Segmentation. Built for Decathlon China customer intelligence.
+                </p>
+                <div class="footer-links">
+                    <a href="resume.html">← Back to Resume</a>
+                    <a href="#business-value">Impact</a>
+                    <a href="#solution">Solution</a>
+                    <a href="#features">Features</a>
+                    <a href="#tech-stack">Tech</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
