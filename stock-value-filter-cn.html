@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Value Filter | Portfolio Project</title>
+    <title>股票价值筛选 | 项目案例</title>
     <link rel="stylesheet" href="project.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,29 +14,29 @@
     <nav class="nav-banner">
         <div class="nav-banner-inner">
             <div class="nav-banner-left">
-                <a href="resume.html#resume" class="nav-banner-btn">
+                <a href="resume-cn.html#resume" class="nav-banner-btn">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                         <polyline points="14 2 14 8 20 8"/>
                         <line x1="16" y1="13" x2="8" y2="13"/>
                         <line x1="16" y1="17" x2="8" y2="17"/>
                     </svg>
-                    <span>Resume</span>
+                    <span>简历</span>
                 </a>
-                <a href="resume.html#portfolio" class="nav-banner-btn active">
+                <a href="resume-cn.html#portfolio" class="nav-banner-btn active">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <rect x="3" y="3" width="7" height="7"/>
                         <rect x="14" y="3" width="7" height="7"/>
                         <rect x="14" y="14" width="7" height="7"/>
                         <rect x="3" y="14" width="7" height="7"/>
                     </svg>
-                    <span>Portfolio</span>
+                    <span>项目</span>
                 </a>
             </div>
             <div class="nav-banner-right">
                 <div class="lang-switch">
-                    <button class="lang-switch-btn active">EN</button>
-                    <a href="stock-value-filter-cn.html" class="lang-switch-btn">CN</a>
+                    <a href="stock-value-filter.html" class="lang-switch-btn">EN</a>
+                    <button class="lang-switch-btn active">CN</button>
                 </div>
             </div>
         </div>
@@ -45,23 +45,23 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <span class="hero-badge">Personal Project · Value Investing · Stock Analysis</span>
-            <h1 class="hero-title">Stock Value<br>Filter</h1>
+            <span class="hero-badge">个人项目 · 价值投资 · 股票分析</span>
+            <h1 class="hero-title">股票价值<br>筛选</h1>
             <p class="hero-subtitle">
-                A value investing tool implementing the Four Quadrants framework to identify high-quality stocks at attractive prices
+                价值投资工具，实现四象限框架以识别价格合理的高质量股票
             </p>
             <div class="hero-stats">
                 <div class="stat-item">
                     <span class="stat-value">4000+</span>
-                    <span class="stat-label">Stocks</span>
+                    <span class="stat-label">股票</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-value">Daily</span>
-                    <span class="stat-label">Price Updates</span>
+                    <span class="stat-value">每日</span>
+                    <span class="stat-label">价格更新</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-value">Monthly</span>
-                    <span class="stat-label">Financial Refresh</span>
+                    <span class="stat-value">每月</span>
+                    <span class="stat-label">财务刷新</span>
                 </div>
             </div>
         </div>
@@ -73,10 +73,10 @@
         <section id="framework" class="section section-alt">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Investment Framework</span>
-                    <h2 class="section-title">Four Quadrants Framework</h2>
+                    <span class="section-tag">投资框架</span>
+                    <h2 class="section-title">四象限框架</h2>
                     <p class="section-subtitle">
-                        Classify stocks by quality (ROE) and price (PE ratio) to find investment opportunities
+                        按质量（ROE）和价格（PE比率）分类股票，寻找投资机会
                     </p>
                 </div>
                 <div class="value-grid">
@@ -87,9 +87,9 @@
                                 <polyline points="12 6 12 12 16 14"/>
                             </svg>
                         </div>
-                        <h3 style="color: var(--gold-500);">Q4: Target Zone</h3>
+                        <h3 style="color: var(--gold-500);">Q4：目标区</h3>
                         <p>
-                            High ROE + Low PE. High-quality companies at attractive valuations. Primary investment candidates.
+                            高ROE + 低PE。价格合理的高质量公司。主要投资候选。
                         </p>
                     </div>
                     <div class="value-card">
@@ -98,9 +98,9 @@
                                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                             </svg>
                         </div>
-                        <h3>Q1: Premium Quality</h3>
+                        <h3>Q1：优质</h3>
                         <p>
-                            High ROE + High PE. Excellent companies but expensive. Wait for price correction.
+                            高ROE + 高PE。优秀公司但价格昂贵。等待价格回调。
                         </p>
                     </div>
                     <div class="value-card">
@@ -111,9 +111,9 @@
                                 <line x1="9" y1="9" x2="15" y2="15"/>
                             </svg>
                         </div>
-                        <h3>Q2: Avoid</h3>
+                        <h3>Q2：避免</h3>
                         <p>
-                            Low ROE + High PE. Poor quality at premium prices. The worst quadrant.
+                            低ROE + 高PE。溢价价格的低质量公司。最差象限。
                         </p>
                     </div>
                     <div class="value-card">
@@ -124,9 +124,9 @@
                                 <line x1="12" y1="17" x2="12.01" y2="17"/>
                             </svg>
                         </div>
-                        <h3>Q3: Value Trap?</h3>
+                        <h3>Q3：价值陷阱？</h3>
                         <p>
-                            Low ROE + Low PE. Cheap but questionable quality. Investigate further.
+                            低ROE + 低PE。便宜但质量存疑。需进一步调查。
                         </p>
                     </div>
                 </div>
@@ -137,32 +137,32 @@
         <section id="pipeline" class="section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Implementation</span>
-                    <h2 class="section-title">Data Pipeline</h2>
+                    <span class="section-tag">实现细节</span>
+                    <h2 class="section-title">数据流程</h2>
                     <p class="section-subtitle">
-                        Automated data collection and classification workflow
+                        自动化数据收集和分类工作流
                     </p>
                 </div>
                 <div class="solution-flow">
                     <div class="flow-step">
                         <div class="step-number">1</div>
                         <div class="step-content">
-                            <h4>Data Collection</h4>
-                            <p>Fetch financial metrics (ROE, PE) and price data from multiple sources via API</p>
+                            <h4>数据收集</h4>
+                            <p>通过API从多个来源获取财务指标（ROE、PE）和价格数据</p>
                         </div>
                     </div>
                     <div class="flow-step">
                         <div class="step-number">2</div>
                         <div class="step-content">
-                            <h4>Incremental Update</h4>
-                            <p>Track metadata to query only new/changed data. Minimize redundant API calls</p>
+                            <h4>增量更新</h4>
+                            <p>追踪元数据仅查询新/变更数据。最小化冗余API调用</p>
                         </div>
                     </div>
                     <div class="flow-step">
                         <div class="step-number">3</div>
                         <div class="step-content">
-                            <h4>Quadrant Classification</h4>
-                            <p>Calculate thresholds and classify each stock into one of four quadrants</p>
+                            <h4>象限分类</h4>
+                            <p>计算阈值并将每只股票分类到四个象限之一</p>
                         </div>
                     </div>
                 </div>
@@ -173,10 +173,10 @@
         <section id="tech-stack" class="section section-alt">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Technology</span>
-                    <h2 class="section-title">Tech Stack</h2>
+                    <span class="section-tag">技术栈</span>
+                    <h2 class="section-title">技术栈</h2>
                     <p class="section-subtitle">
-                        Python-based financial data analysis stack
+                        Python金融数据分析技术栈
                     </p>
                 </div>
                 <div class="tech-grid">
@@ -188,27 +188,27 @@
                     <div class="tech-item">
                         <div class="tech-icon">📊</div>
                         <div class="tech-name">pandas</div>
-                        <div class="tech-version">Data Manip.</div>
+                        <div class="tech-version">数据处理</div>
                     </div>
                     <div class="tech-item">
                         <div class="tech-icon">📈</div>
                         <div class="tech-name">akshare</div>
-                        <div class="tech-version">Stock Data</div>
+                        <div class="tech-version">股票数据</div>
                     </div>
                     <div class="tech-item">
                         <div class="tech-icon">📓</div>
                         <div class="tech-name">Jupyter</div>
-                        <div class="tech-version">Analysis</div>
+                        <div class="tech-version">分析</div>
                     </div>
                     <div class="tech-item">
                         <div class="tech-icon">📉</div>
                         <div class="tech-name">Plotly</div>
-                        <div class="tech-version">Visualization</div>
+                        <div class="tech-version">可视化</div>
                     </div>
                     <div class="tech-item">
                         <div class="tech-icon">🗄️</div>
                         <div class="tech-name">Parquet</div>
-                        <div class="tech-version">Storage</div>
+                        <div class="tech-version">存储</div>
                     </div>
                 </div>
             </div>
@@ -220,13 +220,13 @@
         <div class="container">
             <div class="footer-content">
                 <p class="footer-text">
-                    © 2026 Stock Value Filter. Personal investment analysis project.
+                    © 2026 股票价值筛选。个人投资分析项目。
                 </p>
                 <div class="footer-links">
-                    <a href="resume.html">← Back to Resume</a>
-                    <a href="#framework">Framework</a>
-                    <a href="#pipeline">Pipeline</a>
-                    <a href="#tech-stack">Tech</a>
+                    <a href="resume-cn.html">← 返回简历</a>
+                    <a href="#framework">框架</a>
+                    <a href="#pipeline">流程</a>
+                    <a href="#tech-stack">技术</a>
                 </div>
             </div>
         </div>

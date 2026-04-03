@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Member Churn Prediction | Portfolio Project</title>
+    <title>智能型号推荐 | 项目案例</title>
     <link rel="stylesheet" href="project.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,29 +14,29 @@
     <nav class="nav-banner">
         <div class="nav-banner-inner">
             <div class="nav-banner-left">
-                <a href="resume.html#resume" class="nav-banner-btn">
+                <a href="resume-cn.html#resume" class="nav-banner-btn">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                         <polyline points="14 2 14 8 20 8"/>
                         <line x1="16" y1="13" x2="8" y2="13"/>
                         <line x1="16" y1="17" x2="8" y2="17"/>
                     </svg>
-                    <span>Resume</span>
+                    <span>简历</span>
                 </a>
-                <a href="resume.html#portfolio" class="nav-banner-btn active">
+                <a href="resume-cn.html#portfolio" class="nav-banner-btn active">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <rect x="3" y="3" width="7" height="7"/>
                         <rect x="14" y="3" width="7" height="7"/>
                         <rect x="14" y="14" width="7" height="7"/>
                         <rect x="3" y="14" width="7" height="7"/>
                     </svg>
-                    <span>Portfolio</span>
+                    <span>项目</span>
                 </a>
             </div>
             <div class="nav-banner-right">
                 <div class="lang-switch">
-                    <button class="lang-switch-btn active">EN</button>
-                    <a href="churn-member-prediction-cn.html" class="lang-switch-btn">CN</a>
+                    <a href="smart-model-choice.html" class="lang-switch-btn">EN</a>
+                    <button class="lang-switch-btn active">CN</button>
                 </div>
             </div>
         </div>
@@ -45,23 +45,23 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <span class="hero-badge">Machine Learning · Customer Retention · Binary Classification</span>
-            <h1 class="hero-title">Member Churn<br>Prediction System</h1>
+            <span class="hero-badge">深度学习 · 序列建模 · 产品推荐</span>
+            <h1 class="hero-title">智能型号<br>推荐系统</h1>
             <p class="hero-subtitle">
-                An enterprise-grade ML platform that identifies at-risk members before they churn, enabling proactive retention strategies and maximizing customer lifetime value
+                基于Transformer的推荐引擎，通过购买序列建模和城市特定模式预测客户最优产品型号
             </p>
             <div class="hero-stats">
                 <div class="stat-item">
-                    <span class="stat-value">RFECV</span>
-                    <span class="stat-label">Feature Selection</span>
+                    <span class="stat-value">32</span>
+                    <span class="stat-label">最大序列</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-value">Hyperopt</span>
-                    <span class="stat-label">Bayesian Optimization</span>
+                    <span class="stat-value">1.5M</span>
+                    <span class="stat-label">训练样本</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-value">3</span>
-                    <span class="stat-label">ML Models</span>
+                    <span class="stat-value">10</span>
+                    <span class="stat-label">城市集群</span>
                 </div>
             </div>
         </div>
@@ -73,23 +73,49 @@
         <section id="business-value" class="section section-alt">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Business Impact</span>
-                    <h2 class="section-title">Why This Matters</h2>
+                    <span class="section-tag">商业价值</span>
+                    <h2 class="section-title">为什么重要</h2>
                     <p class="section-subtitle">
-                        Transforming customer retention from reactive damage control to proactive relationship management
+                        将产品推荐从静态规则转向智能序列预测
                     </p>
                 </div>
                 <div class="value-grid">
                     <div class="value-card">
                         <div class="value-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <line x1="12" y1="1" x2="12" y2="23"/>
-                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                <path d="M12 2a10 10 0 1 0 10 10"/>
+                                <path d="M12 12l4-4"/>
+                                <path d="M12 2v4"/>
+                                <path d="M22 12h-4"/>
                             </svg>
                         </div>
-                        <h3>Revenue Protection</h3>
+                        <h3>AI驱动推荐</h3>
                         <p>
-                            Customer churn directly impacts revenue and undermines long-term customer lifetime value (CLV). Identifying at-risk members early enables targeted interventions that preserve revenue streams.
+                            利用基于Transformer的深度学习理解客户购买模式。根据购买历史和相似客户序列预测每个客户的下一个最佳型号。
+                        </p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                        </div>
+                        <h3>城市特定智能</h3>
+                        <p>
+                            每个城市有独特的偏好和购买模式。为北京、南京、杭州等城市训练独立模型，捕捉本地市场动态和文化偏好。
+                        </p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                                <polyline points="16 7 22 7 22 13"/>
+                            </svg>
+                        </div>
+                        <h3>畅销与滞销分析</h3>
+                        <p>
+                            识别推荐畅销型号和应避免的滞销型号。为库存规划和降价策略生成可执行洞察。
                         </p>
                     </div>
                     <div class="value-card">
@@ -100,34 +126,9 @@
                                 <circle cx="12" cy="12" r="2"/>
                             </svg>
                         </div>
-                        <h3>Targeted Retention</h3>
+                        <h3>门店缺失汇总</h3>
                         <p>
-                            Replace blanket retention campaigns with precision-targeted interventions. Personalized offers reach only those who need them, maximizing ROI on retention spend.
-                        </p>
-                    </div>
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <line x1="18" y1="20" x2="18" y2="10"/>
-                                <line x1="12" y1="20" x2="12" y2="4"/>
-                                <line x1="6" y1="20" x2="6" y2="14"/>
-                            </svg>
-                        </div>
-                        <h3>Customer Intelligence</h3>
-                        <p>
-                            Uncover intricate patterns in member behavior, engagement, and purchase history. Understand what drives churn risk across different customer segments.
-                        </p>
-                    </div>
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <polyline points="23 4 23 10 17 10"/>
-                                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
-                            </svg>
-                        </div>
-                        <h3>Proactive Strategy</h3>
-                        <p>
-                            Shift from reactive churn management to proactive retention. Deliver timely interventions before members disengage, maximizing customer lifetime value.
+                            分析推荐型号与上架库存之间的差距。识别改进门店选品和捕捉错失销售潜力的机会。
                         </p>
                     </div>
                 </div>
@@ -139,47 +140,52 @@
             <div class="container">
                 <div class="challenge-content">
                     <div class="challenge-text">
-                        <span class="section-tag">The Problem</span>
-                        <h3 class="challenge-title">The High Cost of Member Attrition</h3>
+                        <span class="section-tag">问题背景</span>
+                        <h3 class="challenge-title">规则推荐的局限性</h3>
                         <p>
-                            Decathlon faces significant member attrition each year. Customer churn not only results in direct revenue loss but also undermines long-term customer lifetime value (CLV) and brand loyalty.
+                            传统产品推荐依赖静态规则、协同过滤或简单关联挖掘。这些方法无法捕捉客户行为中的时序模式、序列依赖和城市特定偏好。
                         </p>
                         <p>
-                            The challenge is compounded by the complexity of member behavior: purchase patterns, engagement levels, demographic factors, and seasonal variations all influence churn risk in non-linear ways.
+                            客户不会孤立购买产品——他们的购买形成有意义的序列。理解这些序列需要能处理长程依赖和上下文信息的复杂深度学习模型。
                         </p>
                         <ul class="challenge-list">
-                            <li><span class="challenge-marker">✕</span> Reactive interventions that come too late</li>
-                            <li><span class="challenge-marker">✕</span> One-size-fits-all retention campaigns</li>
-                            <li><span class="challenge-marker">✕</span> Inability to process multi-dimensional behavioral data</li>
-                            <li><span class="challenge-marker">✕</span> No systematic way to identify high-risk segments</li>
-                            <li><span class="challenge-marker">✕</span> Missed opportunities for proactive engagement</li>
+                            <li><span class="challenge-marker">✕</span> 静态规则遗漏时序购买模式</li>
+                            <li><span class="challenge-marker">✕</span> 一刀切模型忽略城市差异</li>
+                            <li><span class="challenge-marker">✕</span> 无法理解购买序列上下文</li>
+                            <li><span class="challenge-marker">✕</span> 处理变长历史困难</li>
+                            <li><span class="challenge-marker">✕</span> 滞销型号识别是被动而非主动</li>
                         </ul>
                     </div>
                     <div class="challenge-visual">
-                        <h4 class="visual-title">The Churn Journey</h4>
+                        <h4 class="visual-title">购买序列建模</h4>
                         <div class="pareto-diagram">
                             <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
-                                <!-- Engagement curve declining -->
-                                <path d="M 20 40 Q 100 50, 150 80 T 280 140 T 380 170"
-                                      fill="none" stroke="#c9a962" stroke-width="3" stroke-dasharray="5,5"/>
-                                <!-- Threshold line -->
-                                <line x1="0" y1="150" x2="400" y2="150" stroke="#2e4061" stroke-width="2" stroke-dasharray="8,4"/>
-                                <!-- Points along curve -->
-                                <circle cx="50" cy="45" r="5" fill="#c9a962"/>
-                                <circle cx="120" cy="65" r="5" fill="#c9a962"/>
-                                <circle cx="180" cy="95" r="5" fill="#c9a962"/>
-                                <circle cx="250" cy="125" r="5" fill="#2e4061"/>
-                                <circle cx="320" cy="155" r="5" fill="#2e4061"/>
+                                <!-- Sequence boxes -->
+                                <rect x="20" y="80" width="50" height="40" fill="#c9a962" rx="4"/>
+                                <rect x="90" y="80" width="50" height="40" fill="#c9a962" rx="4" opacity="0.8"/>
+                                <rect x="160" y="80" width="50" height="40" fill="#c9a962" rx="4" opacity="0.6"/>
+                                <rect x="230" y="80" width="50" height="40" fill="#c9a962" rx="4" opacity="0.4"/>
+                                <rect x="300" y="80" width="50" height="40" fill="#2e4061" rx="4" stroke="#c9a962" stroke-width="3"/>
+                                <!-- Arrows -->
+                                <path d="M 70 100 L 90 100" stroke="#1a2744" stroke-width="2"/>
+                                <path d="M 140 100 L 160 100" stroke="#1a2744" stroke-width="2"/>
+                                <path d="M 210 100 L 230 100" stroke="#1a2744" stroke-width="2"/>
+                                <path d="M 280 100 L 300 100" stroke="#1a2744" stroke-width="2"/>
                                 <!-- Labels -->
-                                <text x="50" y="30" fill="#c9a962" font-size="10" text-anchor="middle">Active</text>
-                                <text x="180" y="80" fill="#c9a962" font-size="10" text-anchor="middle">At-Risk</text>
-                                <text x="320" y="140" fill="#2e4061" font-size="10" text-anchor="middle">Churned</text>
+                                <text x="45" y="70" fill="#c9a962" font-size="9" text-anchor="middle">型号1</text>
+                                <text x="115" y="70" fill="#c9a962" font-size="9" text-anchor="middle">型号2</text>
+                                <text x="185" y="70" fill="#c9a962" font-size="9" text-anchor="middle">型号3</text>
+                                <text x="255" y="70" fill="#c9a962" font-size="9" text-anchor="middle">型号4</text>
+                                <text x="325" y="70" fill="#2e4061" font-size="9" text-anchor="middle">预测</text>
+                                <text x="200" y="150" fill="#1a2744" font-size="10" text-anchor="middle">购买序列 → 下一个型号预测</text>
                             </svg>
                         </div>
                         <div class="diagram-labels">
-                            <span class="diagram-label">Engaged</span>
-                            <span class="diagram-label">Disengaging</span>
-                            <span class="diagram-label">Churned</span>
+                            <span class="diagram-label">t-3</span>
+                            <span class="diagram-label">t-2</span>
+                            <span class="diagram-label">t-1</span>
+                            <span class="diagram-label">t</span>
+                            <span class="diagram-label">t+1</span>
                         </div>
                     </div>
                 </div>
@@ -190,60 +196,53 @@
         <section id="solution" class="section section-alt">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">The Solution</span>
-                    <h2 class="section-title">A Data-Driven Approach</h2>
+                    <span class="section-tag">解决方案</span>
+                    <h2 class="section-title">深度学习方法</h2>
                     <p class="section-subtitle">
-                        End-to-end machine learning pipeline that transforms member behavioral data into actionable churn predictions
+                        基于Transformer的序列建模用于智能产品推荐
                     </p>
                 </div>
                 <div class="solution-flow">
                     <div class="flow-step">
                         <div class="step-number">1</div>
                         <div class="step-content">
-                            <h4>Data Segmentation</h4>
-                            <p>Separate members by purchase frequency (low vs. high) to capture distinct churn patterns across different engagement levels</p>
+                            <h4>按城市查询畅销型号</h4>
+                            <p>从交易数据提取城市畅销型号，设置数量和周转阈值（qty≥20, to≥10000）</p>
                         </div>
                     </div>
                     <div class="flow-step">
                         <div class="step-number">2</div>
                         <div class="step-content">
-                            <h4>Feature Engineering</h4>
-                            <p>Create derived features capturing recency, frequency, monetary value, engagement, and derived ratios that reveal churn signals</p>
+                            <h4>构建购买序列</h4>
+                            <p>从交易历史构建客户购买序列，型号代码token化，填充/截断至最大长度32</p>
                         </div>
                     </div>
                     <div class="flow-step">
                         <div class="step-number">3</div>
                         <div class="step-content">
-                            <h4>Customer Segmentation</h4>
-                            <p>K-means clustering identifies natural member groupings based on behavioral similarity, improving model generalization</p>
+                            <h4>训练Transformer模型</h4>
+                            <p>自定义GPT风格架构：256嵌入维度，2个attention头，2层，词表大小12,424（型号代码+特殊token）</p>
                         </div>
                     </div>
                     <div class="flow-step">
                         <div class="step-number">4</div>
                         <div class="step-content">
-                            <h4>Feature Selection (RFECV)</h4>
-                            <p>Recursive Feature Elimination with Cross-Validation identifies the most predictive features, reducing noise and overfitting</p>
+                            <h4>城市特定训练</h4>
+                            <p>为每个城市训练独立模型（北京、南京、杭州），1.5M样本，90/10训练/验证划分</p>
                         </div>
                     </div>
                     <div class="flow-step">
                         <div class="step-number">5</div>
                         <div class="step-content">
-                            <h4>Hyperparameter Optimization</h4>
-                            <p>Hyperopt Bayesian optimization searches hyperparameter space efficiently, finding optimal configurations for XGBoost, LightGBM, CatBoost</p>
+                            <h4>生成推荐</h4>
+                            <p>为每个客户预测下一个型号概率，按可能性排名，生成Top-N推荐</p>
                         </div>
                     </div>
                     <div class="flow-step">
                         <div class="step-number">6</div>
                         <div class="step-content">
-                            <h4>Class Imbalance Handling</h4>
-                            <p>Tomek Links under-sampling cleans decision boundaries, improving model performance on imbalanced churn data</p>
-                        </div>
-                    </div>
-                    <div class="flow-step">
-                        <div class="step-number">7</div>
-                        <div class="step-content">
-                            <h4>Prediction & Intervention</h4>
-                            <p>Generate churn probabilities for current members, rank by risk score, and trigger targeted retention campaigns</p>
+                            <h4>滞销分析与缺失汇总</h4>
+                            <p>识别表现不佳型号，分析门店级别推荐与上架库存差距</p>
                         </div>
                     </div>
                 </div>
@@ -254,10 +253,10 @@
         <section id="architecture" class="section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">System Design</span>
-                    <h2 class="section-title">Technical Architecture</h2>
+                    <span class="section-tag">系统设计</span>
+                    <h2 class="section-title">技术架构</h2>
                     <p class="section-subtitle">
-                        Modular, production-ready codebase with clear separation of concerns
+                        端到端深度学习流程用于序列产品推荐
                     </p>
                 </div>
                 <div class="architecture-grid">
@@ -270,29 +269,29 @@
                                     <line x1="12" y1="15" x2="12" y2="3"/>
                                 </svg>
                             </div>
-                            <h4>Data Loading</h4>
+                            <h4>数据源</h4>
                         </div>
                         <ul class="arch-list">
-                            <li><strong>Source:</strong> CNDP Data Warehouse</li>
-                            <li><strong>SQL Queries:</strong> Custom extraction</li>
-                            <li><strong>Frequency Split:</strong> Low vs. High</li>
+                            <li><strong>交易数据：</strong>会员级别购买</li>
+                            <li><strong>型号列表：</strong>门店上架型号</li>
+                            <li><strong>树视图：</strong>产品层级</li>
+                            <li><strong>生命周期：</strong>型号生命周期阶段</li>
                         </ul>
                     </div>
                     <div class="arch-card">
                         <div class="arch-card-header">
                             <div class="arch-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <circle cx="11" cy="11" r="8"/>
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-3.77 3.77a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1 7.94 7.94l-3.77 3.77a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77"/>
                                 </svg>
                             </div>
-                            <h4>Feature Engineering</h4>
+                            <h4>序列处理</h4>
                         </div>
                         <ul class="arch-list">
-                            <li><strong>RFM Features:</strong> Recency, Frequency, Monetary</li>
-                            <li><strong>Engagement:</strong> Sport activity, workshop</li>
-                            <li><strong>Derived:</strong> Ratios, interactions</li>
-                            <li><strong>Clustering:</strong> K-means segments</li>
+                            <li><strong>Token化：</strong>型号代码 → token ID</li>
+                            <li><strong>最大长度：</strong>32时间步</li>
+                            <li><strong>填充：</strong>&lt;PAD&gt; token</li>
+                            <li><strong>分隔：</strong>&lt;SEP&gt; token</li>
                         </ul>
                     </div>
                     <div class="arch-card">
@@ -305,13 +304,13 @@
                                     <path d="M22 12h-4"/>
                                 </svg>
                             </div>
-                            <h4>Model Training</h4>
+                            <h4>模型架构</h4>
                         </div>
                         <ul class="arch-list">
-                            <li><strong>Algorithms:</strong> XGB, LGB, CatBoost</li>
-                            <li><strong>Optimization:</strong> Hyperopt TPE (200 trials)</li>
-                            <li><strong>Validation:</strong> 5-fold stratified CV</li>
-                            <li><strong>Imbalance:</strong> Tomek Links</li>
+                            <li><strong>嵌入：</strong>256维度</li>
+                            <li><strong>Attention：</strong>2头，2层</li>
+                            <li><strong>词表大小：</strong>12,424 tokens</li>
+                            <li><strong>Drop率：</strong>0.0（无dropout）</li>
                         </ul>
                     </div>
                     <div class="arch-card">
@@ -322,13 +321,13 @@
                                     <polyline points="22 4 12 14.01 9 11.01"/>
                                 </svg>
                             </div>
-                            <h4>Predictions</h4>
+                            <h4>输出与分析</h4>
                         </div>
                         <ul class="arch-list">
-                            <li><strong>Output:</strong> Churn probability (0-1)</li>
-                            <li><strong>Metrics:</strong> AUC-ROC, Log Loss, F1</li>
-                            <li><strong>Storage:</strong> Local + OSS (Alibaba Cloud)</li>
-                            <li><strong>Action:</strong> Risk-ranked member list</li>
+                            <li><strong>推荐：</strong>每客户Top-N型号</li>
+                            <li><strong>滞销统计：</strong>表现不佳型号</li>
+                            <li><strong>缺失汇总：</strong>门店级别差距</li>
+                            <li><strong>城市报告：</strong>本地化洞察</li>
                         </ul>
                     </div>
                 </div>
@@ -339,77 +338,159 @@
         <section id="pipeline" class="section section-alt">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Implementation</span>
-                    <h2 class="section-title">Data Pipeline</h2>
+                    <span class="section-tag">实现细节</span>
+                    <h2 class="section-title">数据流程</h2>
                     <p class="section-subtitle">
-                        Seven-stage processing pipeline from raw data to churn predictions
+                        从原始交易到推荐的六阶段处理流程
                     </p>
                 </div>
                 <div class="pipeline-timeline">
                     <div class="pipeline-item">
                         <div class="pipeline-marker"></div>
                         <div class="pipeline-content">
-                            <h4>Step 0: Data Extraction</h4>
-                            <p>Query member data from CNDP warehouse including RFM metrics, engagement, demographics, and churn labels</p>
+                            <h4>步骤1：处理上架型号</h4>
+                            <p>按城市提取和处理上架型号文件，准备型号库存数据用于训练和验证</p>
                         </div>
                     </div>
                     <div class="pipeline-item">
                         <div class="pipeline-marker"></div>
                         <div class="pipeline-content">
-                            <h4>Step 1: Data Preprocessing</h4>
-                            <p>Split by frequency (≤2 vs. >2 purchases), filter invalid records (negative values, empty age groups), handle outliers</p>
+                            <h4>步骤2：提取型号列表</h4>
+                            <p>从交易数据库按城市查询畅销型号，设置数量和周转过滤，提取北京/南京/杭州数据</p>
                         </div>
                     </div>
                     <div class="pipeline-item">
                         <div class="pipeline-marker"></div>
                         <div class="pipeline-content">
-                            <h4>Step 2: Feature Engineering</h4>
-                            <p>Create derived features: recency_minus_freq, lifespan_times_monetary, top1_sports_spending_percentage, lifespan_devidedby_tenure</p>
+                            <h4>步骤3：构建序列</h4>
+                            <p>从会员交易构建购买序列，型号代码token化，创建训练/验证数据集（1.5M样本）</p>
                         </div>
                     </div>
                     <div class="pipeline-item">
                         <div class="pipeline-marker"></div>
                         <div class="pipeline-content">
-                            <h4>Step 3: Customer Segmentation</h4>
-                            <p>Transform skewed data (PowerTransformer), scale features (MinMaxScaler), find optimal K (KneeLocator), apply K-means clustering</p>
+                            <h4>步骤4：训练模型</h4>
+                            <p>用PyTorch训练城市特定Transformer模型，90/10训练/验证划分，保存模型权重到models目录</p>
                         </div>
                     </div>
                     <div class="pipeline-item">
                         <div class="pipeline-marker"></div>
                         <div class="pipeline-content">
-                            <h4>Step 4: Feature Selection</h4>
-                            <p>RFECV with LightGBM, 5-fold stratified CV, precision scoring, select top features that maximize predictive power</p>
+                            <h4>步骤5：生成推荐</h4>
+                            <p>加载训练模型，为客户预测下一个型号概率，生成排名推荐列表</p>
                         </div>
                     </div>
                     <div class="pipeline-item">
                         <div class="pipeline-marker"></div>
                         <div class="pipeline-content">
-                            <h4>Step 5: Model Training</h4>
-                            <p>Hyperopt Bayesian optimization (200 trials), Tomek Links under-sampling, 5-fold CV, save best model to OSS</p>
-                        </div>
-                    </div>
-                    <div class="pipeline-item">
-                        <div class="pipeline-marker"></div>
-                        <div class="pipeline-content">
-                            <h4>Step 6: Churn Prediction</h4>
-                            <p>Load trained model, generate churn probabilities for current members, rank by risk, export to CSV for intervention</p>
+                            <h4>步骤6：分析与报告</h4>
+                            <p>查询滞销型号，生成门店缺失汇总，分析门店表现，创建城市特定报告</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Features Section - Key Predictors -->
+        <!-- Features Section - Model & Configuration -->
         <section id="features" class="section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Feature Engineering</span>
-                    <h2 class="section-title">Key Predictors</h2>
+                    <span class="section-tag">核心功能</span>
+                    <h2 class="section-title">模型与配置</h2>
                     <p class="section-subtitle">
-                        Features engineered to capture member behavior, engagement, and churn risk signals
+                        架构细节和城市特定配置
                     </p>
                 </div>
                 <div class="features-grid">
+                    <div class="feature-column">
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2a10 10 0 1 0 10 10"/>
+                                    <path d="M12 12l4-4"/>
+                                    <path d="M12 2v4"/>
+                                    <path d="M22 12h-4"/>
+                                </svg>
+                                Transformer架构
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">嵌入维度：256</span>
+                                        <span class="feature-desc">型号代码和位置嵌入</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Attention头：2</span>
+                                        <span class="feature-desc">多头self-attention机制</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">Transformer层：2</span>
+                                        <span class="feature-desc">堆叠encoder块</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">上下文长度：32</span>
+                                        <span class="feature-desc">最大购买序列长度</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">词表大小：12,424</span>
+                                        <span class="feature-desc">唯一型号代码 + &lt;PAD&gt; + &lt;SEP&gt;</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-category">
+                            <h4 class="category-title">
+                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <polyline points="9 22 9 12 15 12 15 22"/>
+                                </svg>
+                                城市配置
+                            </h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">北京</span>
+                                        <span class="feature-desc">19门店，春季：2月26日-6月3日，夏季：6月3日-8月26日</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">南京</span>
+                                        <span class="feature-desc">8门店，春季：2月12日-5月6日，夏季：5月6日-8月26日</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">杭州</span>
+                                        <span class="feature-desc">7门店，春季：2月12日-5月6日，夏季：5月6日-8月26日</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-arrow">→</span>
+                                    <div class="feature-content">
+                                        <span class="feature-name">季节定义</span>
+                                        <span class="feature-desc">城市特定季节起止日期用于2024SS、2024AW、2025SS、2025AW</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="feature-column">
                         <div class="feature-category">
                             <h4 class="category-title">
@@ -418,143 +499,74 @@
                                     <line x1="12" y1="20" x2="12" y2="4"/>
                                     <line x1="6" y1="20" x2="6" y2="14"/>
                                 </svg>
-                                Core RFM Features
+                                训练配置
                             </h4>
                             <ul class="feature-list">
                                 <li>
                                     <span class="feature-arrow">→</span>
                                     <div class="feature-content">
-                                        <span class="feature-name">recency</span>
-                                        <span class="feature-desc">Days since last purchase to cutoff date</span>
+                                        <span class="feature-name">训练/验证划分：90/10</span>
+                                        <span class="feature-desc">1.35M训练，150K验证样本</span>
                                     </div>
                                 </li>
                                 <li>
                                     <span class="feature-arrow">→</span>
                                     <div class="feature-content">
-                                        <span class="feature-name">frequency</span>
-                                        <span class="feature-desc">Rolling 12-month purchase count</span>
+                                        <span class="feature-name">城市标签概率</span>
+                                        <span class="feature-desc">成都：[7.2%, 9.2%, 10.9%, 10.0%, 7.1%, 17.9%, 12.1%, 6.1%, 13.5%, 6.0%]</span>
                                     </div>
                                 </li>
                                 <li>
                                     <span class="feature-arrow">→</span>
                                     <div class="feature-content">
-                                        <span class="feature-name">monetary</span>
-                                        <span class="feature-desc">Rolling 12-month purchase amount</span>
+                                        <span class="feature-name">门店标签概率</span>
+                                        <span class="feature-desc">每门店概率分布用于评估</span>
                                     </div>
                                 </li>
                                 <li>
                                     <span class="feature-arrow">→</span>
                                     <div class="feature-content">
-                                        <span class="feature-name">avb</span>
-                                        <span class="feature-desc">Average basket value (monetary / frequency)</span>
+                                        <span class="feature-name">随机种子：123</span>
+                                        <span class="feature-desc">可复现训练和评估</span>
                                     </div>
                                 </li>
                             </ul>
                         </div>
-                        <div class="feature-category">
-                            <h4 class="category-title">
-                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <circle cx="12" cy="12" r="6"/>
-                                    <circle cx="12" cy="12" r="2"/>
-                                </svg>
-                                Engagement Features
-                            </h4>
-                            <ul class="feature-list">
-                                <li>
-                                    <span class="feature-arrow">→</span>
-                                    <div class="feature-content">
-                                        <span class="feature-name">sport_activity_freq</span>
-                                        <span class="feature-desc">Rolling 12-month sport platform participation</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="feature-arrow">→</span>
-                                    <div class="feature-content">
-                                        <span class="feature-name">workshop_freq</span>
-                                        <span class="feature-desc">Rolling 12-month workshop participation</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="feature-arrow">→</span>
-                                    <div class="feature-content">
-                                        <span class="feature-name">point_spending</span>
-                                        <span class="feature-desc">Rolling 12-month loyalty points consumed</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-column">
                         <div class="feature-category">
                             <h4 class="category-title">
                                 <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                     <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
                                     <polyline points="16 7 22 7 22 13"/>
                                 </svg>
-                                Derived Features
+                                分析模块
                             </h4>
                             <ul class="feature-list">
                                 <li>
                                     <span class="feature-arrow">→</span>
                                     <div class="feature-content">
-                                        <span class="feature-name">recency_minus_freq</span>
-                                        <span class="feature-desc">recency - (365 / frequency)</span>
+                                        <span class="feature-name">滞销型号查询</span>
+                                        <span class="feature-desc">按销售指标识别表现不佳型号</span>
                                     </div>
                                 </li>
                                 <li>
                                     <span class="feature-arrow">→</span>
                                     <div class="feature-content">
-                                        <span class="feature-name">lifespan_times_monetary</span>
-                                        <span class="feature-desc">Estimated total lifetime spending</span>
+                                        <span class="feature-name">门店缺失汇总</span>
+                                        <span class="feature-desc">推荐与上架型号差距分析</span>
                                     </div>
                                 </li>
                                 <li>
                                     <span class="feature-arrow">→</span>
                                     <div class="feature-content">
-                                        <span class="feature-name">top1_sports_spending_percentage</span>
-                                        <span class="feature-desc">Concentration of spending in favorite sport</span>
+                                        <span class="feature-name">门店表现回顾</span>
+                                        <span class="feature-desc">多维度门店表现分析</span>
                                     </div>
                                 </li>
                                 <li>
                                     <span class="feature-arrow">→</span>
                                     <div class="feature-content">
-                                        <span class="feature-name">lifespan_devidedby_tenure</span>
-                                        <span class="feature-desc">Active time percentage since registration</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="feature-category">
-                            <h4 class="category-title">
-                                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                    <circle cx="9" cy="7" r="4"/>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                                </svg>
-                                Demographic Features
-                            </h4>
-                            <ul class="feature-list">
-                                <li>
-                                    <span class="feature-arrow">→</span>
-                                    <div class="feature-content">
-                                        <span class="feature-name">age_group</span>
-                                        <span class="feature-desc">Member age bracket (categorical)</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="feature-arrow">→</span>
-                                    <div class="feature-content">
-                                        <span class="feature-name">gender</span>
-                                        <span class="feature-desc">Member gender (M/F)</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="feature-arrow">→</span>
-                                    <div class="feature-content">
-                                        <span class="feature-name">city_tier</span>
-                                        <span class="feature-desc">City classification by market size</span>
+                                        <span class="feature-name">按居住区运动周转</span>
+                                        <span class="feature-desc">地理表现分析</span>
                                     </div>
                                 </li>
                             </ul>
@@ -568,10 +580,10 @@
         <section id="tech-stack" class="section section-alt">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Technology</span>
-                    <h2 class="section-title">Tech Stack</h2>
+                    <span class="section-tag">技术栈</span>
+                    <h2 class="section-title">技术栈</h2>
                     <p class="section-subtitle">
-                        Python-based machine learning stack for churn prediction
+                        序列建模和推荐的深度学习技术栈
                     </p>
                 </div>
                 <div class="tech-grid">
@@ -581,39 +593,39 @@
                         <div class="tech-version">3.x</div>
                     </div>
                     <div class="tech-item">
-                        <div class="tech-icon">📈</div>
-                        <div class="tech-name">XGBoost</div>
-                        <div class="tech-version">Gradient Boosting</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">⚡</div>
-                        <div class="tech-name">LightGBM</div>
-                        <div class="tech-version">Fast GB</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">🐱</div>
-                        <div class="tech-name">CatBoost</div>
-                        <div class="tech-version">Categorical</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">🔧</div>
-                        <div class="tech-name">Hyperopt</div>
-                        <div class="tech-version">Bayesian Opt</div>
+                        <div class="tech-icon">🔥</div>
+                        <div class="tech-name">PyTorch</div>
+                        <div class="tech-version">深度学习</div>
                     </div>
                     <div class="tech-item">
                         <div class="tech-icon">📊</div>
                         <div class="tech-name">pandas</div>
-                        <div class="tech-version">Data Manip.</div>
+                        <div class="tech-version">数据处理</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔢</div>
+                        <div class="tech-name">NumPy</div>
+                        <div class="tech-version">数值计算</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🗜️</div>
+                        <div class="tech-name">scikit-learn</div>
+                        <div class="tech-version">ML工具</div>
                     </div>
                     <div class="tech-item">
                         <div class="tech-icon">☁️</div>
                         <div class="tech-name">ODPS</div>
-                        <div class="tech-version">Data Warehouse</div>
+                        <div class="tech-version">数据仓库</div>
                     </div>
                     <div class="tech-item">
-                        <div class="tech-icon">📉</div>
-                        <div class="tech-name">Tableau</div>
-                        <div class="tech-version">Dashboards</div>
+                        <div class="tech-icon">📓</div>
+                        <div class="tech-name">Jupyter</div>
+                        <div class="tech-version">分析</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🗄️</div>
+                        <div class="tech-name">SQL</div>
+                        <div class="tech-version">数据查询</div>
                     </div>
                 </div>
             </div>
@@ -625,14 +637,14 @@
         <div class="container">
             <div class="footer-content">
                 <p class="footer-text">
-                    © 2026 Member Churn Prediction. Built for Decathlon China CRM team.
+                    © 2026 智能型号推荐。为迪卡侬中国产品推荐构建。
                 </p>
                 <div class="footer-links">
-                    <a href="resume.html">← Back to Resume</a>
-                    <a href="#business-value">Impact</a>
-                    <a href="#solution">Solution</a>
-                    <a href="#features">Predictors</a>
-                    <a href="#tech-stack">Tech</a>
+                    <a href="resume-cn.html">← 返回简历</a>
+                    <a href="#business-value">价值</a>
+                    <a href="#solution">方案</a>
+                    <a href="#features">功能</a>
+                    <a href="#tech-stack">技术</a>
                 </div>
             </div>
         </div>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fan Fan - Portfolio | Data & AI Leader</title>
+    <title>樊帆 - 作品集 | 数据与AI领导者</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -11,7 +11,7 @@
 
 /* === resume.css === */
 /* ========================================
-   Resume Stylesheet - Professional Classic
+   简历 Stylesheet - Professional Classic
    Deep Navy & Gold Palette
    ======================================== */
 
@@ -88,7 +88,7 @@ body {
     padding: var(--space-xl);
 }
 
-/* Main Resume Container */
+/* Main 简历 Container */
 .resume {
     max-width: 900px;
     margin: 0 auto;
@@ -300,7 +300,7 @@ body {
     top: 0.6em;
     width: 6px;
     height: 6px;
-    background: var(--gold-500);
+    background: rgba(201, 169, 98, 0.2);
     border-radius: 50%;
 }
 
@@ -310,7 +310,7 @@ body {
 }
 
 /* ========================================
-   Education Section
+   教育背景 Section
    ======================================== */
 .education-item {
     margin-bottom: var(--space-lg);
@@ -402,12 +402,12 @@ body {
 }
 
 .skill-tag:hover {
-    background: var(--gold-500);
+    background: rgba(201, 169, 98, 0.2);
     color: white;
 }
 
 /* ========================================
-   Portfolio Section
+   项目展示 Section
    ======================================== */
 .portfolio-section {
     margin-top: var(--space-xl);
@@ -507,14 +507,14 @@ body {
 }
 
 .portfolio-project:hover .project-name {
-    color: var(--navy-800);
+    color: var(--gold-400);
 }
 
 .portfolio-project:hover .project-desc {
     color: var(--slate-600);
 }
 
-/* Portfolio project icon indicator */
+/* 项目展示 project icon indicator */
 .project-icon {
     display: flex;
     align-items: center;
@@ -677,7 +677,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 6px var(--space-xl);
+    padding: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -688,14 +688,13 @@ body {
 /* Dark banner for project pages (default) */
 .nav-banner:not(.nav-banner-light) {
     background: rgba(20, 29, 43, 0.92);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(201, 169, 98, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Light banner for resume pages */
 .nav-banner-light {
     background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     border-bottom: 1px solid var(--slate-200);
 }
 
@@ -718,7 +717,7 @@ body {
     align-items: center;
 }
 
-/* Dark banner buttons (project pages) - refined */
+/* Dark banner buttons (project pages) */
 .nav-banner:not(.nav-banner-light) .nav-banner-btn {
     display: inline-flex;
     align-items: center;
@@ -746,14 +745,9 @@ body {
     background: rgba(201, 169, 98, 0.15);
     color: var(--gold-400);
     border-color: rgba(201, 169, 98, 0.5);
-    box-shadow: none;
 }
 
-.nav-banner:not(.nav-banner-light) .nav-banner-btn.active:hover {
-    background: rgba(201, 169, 98, 0.2);
-}
-
-/* Light banner buttons (resume pages) - more subtle */
+/* Light banner buttons (resume pages) */
 .nav-banner-light .nav-banner-btn {
     display: inline-flex;
     align-items: center;
@@ -783,10 +777,6 @@ body {
     border-color: var(--navy-700);
 }
 
-.nav-banner-light .nav-banner-btn.active:hover {
-    background: var(--navy-600);
-}
-
 .nav-banner-btn:focus-visible {
     outline: 2px solid var(--gold-400);
     outline-offset: 2px;
@@ -810,34 +800,33 @@ body {
     flex-shrink: 0;
 }
 
-/* Language Switch - Dark (project pages) */
+/* Language Switch (dark banner) */
 .nav-banner:not(.nav-banner-light) .lang-switch {
     display: flex;
     align-items: center;
-    gap: 1px;
+    gap: 4px;
     padding: 3px 6px;
-    background: rgba(201, 169, 98, 0.06);
-    border: 1px solid rgba(201, 169, 98, 0.2);
-    border-radius: 3px;
+    background: transparent;
+    border: 1px solid rgba(201, 169, 98, 0.25);
+    border-radius: 4px;
+    margin-left: 8px;
 }
 
 .nav-banner:not(.nav-banner-light) .lang-switch-btn {
-    padding: 2px 6px;
+    padding: 3px 6px;
     background: transparent;
     border: none;
-    color: rgba(148, 163, 184, 0.7);
+    color: rgba(201, 169, 98, 0.7);
     font-size: 0.7rem;
-    font-weight: 500;
+    font-weight: 400;
     cursor: pointer;
     transition: all 150ms ease;
     border-radius: 3px;
-    text-decoration: none;
     font-family: var(--font-body);
 }
 
 .nav-banner:not(.nav-banner-light) .lang-switch-btn:hover {
     color: var(--gold-400);
-    background: rgba(201, 169, 98, 0.08);
 }
 
 .nav-banner:not(.nav-banner-light) .lang-switch-btn.active {
@@ -845,34 +834,33 @@ body {
     color: var(--gold-400);
 }
 
-/* Language Switch - Light (resume pages) */
+/* Language Switch (light banner) */
 .nav-banner-light .lang-switch {
     display: flex;
     align-items: center;
-    gap: 2px;
-    padding: 4px 8px;
-    background: var(--slate-50);
+    gap: 4px;
+    padding: 3px 6px;
+    background: transparent;
     border: 1px solid var(--slate-200);
     border-radius: 4px;
+    margin-left: 8px;
 }
 
 .nav-banner-light .lang-switch-btn {
-    padding: 3px 8px;
+    padding: 3px 6px;
     background: transparent;
     border: none;
-    color: var(--slate-400);
-    font-size: 0.75rem;
-    font-weight: 600;
+    color: var(--slate-500);
+    font-size: 0.7rem;
+    font-weight: 500;
     cursor: pointer;
     transition: all 150ms ease;
     border-radius: 3px;
-    text-decoration: none;
     font-family: var(--font-body);
 }
 
 .nav-banner-light .lang-switch-btn:hover {
-    color: var(--navy-700);
-    background: var(--slate-100);
+    color: var(--slate-700);
 }
 
 .nav-banner-light .lang-switch-btn.active {
@@ -880,45 +868,9 @@ body {
     color: white;
 }
 
-.lang-switch-btn:focus-visible {
-    outline: 2px solid var(--gold-400);
-    outline-offset: 1px;
-}
-
 /* Body offset for fixed banner */
 body {
     padding-top: 38px;
-}
-
-/* Mobile adjustments for nav banner */
-@media (max-width: 480px) {
-    .nav-banner {
-        padding: 5px var(--space-md);
-    }
-
-    .nav-banner:not(.nav-banner-light) .nav-banner-btn {
-        padding: 4px 6px;
-        font-size: 0.7rem;
-        gap: 3px;
-    }
-
-    .nav-banner:not(.nav-banner-light) .nav-banner-btn svg {
-        width: 10px;
-        height: 10px;
-    }
-
-    .nav-banner-btn span {
-        display: none;
-    }
-
-    .nav-banner:not(.nav-banner-light) .lang-switch {
-        padding: 2px 4px;
-    }
-
-    .nav-banner:not(.nav-banner-light) .lang-switch-btn {
-        padding: 2px 4px;
-        font-size: 0.65rem;
-    }
 }
 
 /* ========================================
@@ -946,7 +898,7 @@ body {
 }
 /* === project.css === */
 /* ========================================
-   Project Portfolio Stylesheet
+   Project 项目展示 Stylesheet
    Professional Classic - Deep Navy & Gold
    ======================================== */
 
@@ -1045,7 +997,7 @@ body {
 /* Selection styling */
 ::selection {
     background: rgba(201, 169, 98, 0.25);
-    color: var(--navy-800);
+    color: var(--gold-400);
 }
 
 /* Container */
@@ -1448,7 +1400,7 @@ body {
     justify-content: center;
     font-weight: 600;
     font-size: 1rem;
-    color: var(--navy-800);
+    color: var(--gold-400);
     flex-shrink: 0;
     transition: transform var(--transition-base);
 }
@@ -1593,7 +1545,7 @@ body {
 }
 
 .pipeline-item:hover .pipeline-marker {
-    background: var(--gold-500);
+    background: rgba(201, 169, 98, 0.2);
     transform: scale(1.2);
 }
 
@@ -1922,7 +1874,7 @@ body {
 
 .btn-primary {
     background: linear-gradient(135deg, var(--gold-500) 0%, var(--gold-400) 100%);
-    color: var(--navy-800);
+    color: var(--gold-400);
     border: none;
 }
 
@@ -1995,7 +1947,7 @@ body {
     left: 0;
     width: 0;
     height: 1px;
-    background: var(--gold-500);
+    background: rgba(201, 169, 98, 0.2);
     transition: width var(--transition-base);
 }
 
@@ -2172,29 +2124,39 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: linear-gradient(180deg, var(--navy-800) 0%, var(--navy-700) 100%);
-    padding: 10px var(--space-xl);
+    padding: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-bottom: 2px solid var(--gold-500);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Dark banner for project pages (default) */
+.nav-banner:not(.nav-banner-light) {
+    background: rgba(20, 29, 43, 0.92);
+    border-bottom: 1px solid rgba(201, 169, 98, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Light banner for resume pages */
+.nav-banner-light {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid var(--slate-200);
 }
 
 .nav-banner-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 900px;
     width: 100%;
 }
 
 .nav-banner-left {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
+    gap: 6px;
 }
 
 .nav-banner-right {
@@ -2202,28 +2164,64 @@ body {
     align-items: center;
 }
 
-.nav-banner-btn {
+/* Dark banner buttons (project pages) */
+.nav-banner:not(.nav-banner-light) .nav-banner-btn {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 8px 16px;
+    gap: 4px;
+    padding: 5px 10px;
     background: transparent;
-    border: 1px solid rgba(201, 169, 98, 0.4);
-    color: var(--gold-400);
-    font-size: 0.85rem;
-    font-weight: 500;
+    border: 1px solid rgba(201, 169, 98, 0.25);
+    color: rgba(201, 169, 98, 0.7);
+    font-size: 0.75rem;
+    font-weight: 400;
     text-decoration: none;
-    border-radius: 6px;
-    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 4px;
+    transition: all 150ms ease;
     cursor: pointer;
     font-family: var(--font-body);
 }
 
-.nav-banner-btn:hover {
-    background: rgba(201, 169, 98, 0.12);
-    border-color: var(--gold-500);
-    color: var(--gold-300);
-    transform: translateY(-1px);
+.nav-banner:not(.nav-banner-light) .nav-banner-btn:hover {
+    background: rgba(201, 169, 98, 0.08);
+    border-color: rgba(201, 169, 98, 0.4);
+    color: var(--gold-400);
+}
+
+.nav-banner:not(.nav-banner-light) .nav-banner-btn.active {
+    background: rgba(201, 169, 98, 0.15);
+    color: var(--gold-400);
+    border-color: rgba(201, 169, 98, 0.5);
+}
+
+/* Light banner buttons (resume pages) */
+.nav-banner-light .nav-banner-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    background: transparent;
+    border: 1px solid var(--slate-200);
+    color: var(--slate-500);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 150ms ease;
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+
+.nav-banner-light .nav-banner-btn:hover {
+    background: var(--slate-50);
+    border-color: var(--slate-300);
+    color: var(--slate-700);
+}
+
+.nav-banner-light .nav-banner-btn.active {
+    background: var(--navy-700);
+    color: white;
+    border-color: var(--navy-700);
 }
 
 .nav-banner-btn:focus-visible {
@@ -2235,98 +2233,91 @@ body {
     transform: translateY(0);
 }
 
-.nav-banner-btn.active {
-    background: linear-gradient(135deg, var(--gold-500) 0%, var(--gold-400) 100%);
-    color: var(--navy-800);
-    border-color: var(--gold-500);
-    box-shadow: 0 2px 8px rgba(201, 169, 98, 0.3);
+.nav-banner:not(.nav-banner-light) .nav-banner-btn svg {
+    width: 12px;
+    height: 12px;
+    stroke: currentColor;
+    flex-shrink: 0;
 }
 
-.nav-banner-btn.active:hover {
-    background: linear-gradient(135deg, var(--gold-400) 0%, var(--gold-300) 100%);
-}
-
-.nav-banner-btn svg {
+.nav-banner-light .nav-banner-btn svg {
     width: 14px;
     height: 14px;
     stroke: currentColor;
     flex-shrink: 0;
 }
 
-/* Language Switch */
-.lang-switch {
+/* Language Switch (dark banner) */
+.nav-banner:not(.nav-banner-light) .lang-switch {
     display: flex;
     align-items: center;
-    gap: 2px;
-    padding: 4px 8px;
-    background: rgba(201, 169, 98, 0.08);
+    gap: 4px;
+    padding: 3px 6px;
+    background: transparent;
     border: 1px solid rgba(201, 169, 98, 0.25);
     border-radius: 4px;
+    margin-left: 8px;
 }
 
-.lang-switch-btn {
-    padding: 3px 8px;
+.nav-banner:not(.nav-banner-light) .lang-switch-btn {
+    padding: 3px 6px;
     background: transparent;
     border: none;
-    color: var(--slate-400);
-    font-size: 0.75rem;
-    font-weight: 600;
+    color: rgba(201, 169, 98, 0.7);
+    font-size: 0.7rem;
+    font-weight: 400;
     cursor: pointer;
     transition: all 150ms ease;
     border-radius: 3px;
-    text-decoration: none;
     font-family: var(--font-body);
 }
 
-.lang-switch-btn:hover {
+.nav-banner:not(.nav-banner-light) .lang-switch-btn:hover {
     color: var(--gold-400);
-    background: rgba(201, 169, 98, 0.1);
 }
 
-.lang-switch-btn:focus-visible {
-    outline: 2px solid var(--gold-400);
-    outline-offset: 1px;
+.nav-banner:not(.nav-banner-light) .lang-switch-btn.active {
+    background: rgba(201, 169, 98, 0.2);
+    color: var(--gold-400);
 }
 
-.lang-switch-btn.active {
-    background: var(--gold-500);
-    color: var(--navy-800);
+/* Language Switch (light banner) */
+.nav-banner-light .lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 6px;
+    background: transparent;
+    border: 1px solid var(--slate-200);
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+.nav-banner-light .lang-switch-btn {
+    padding: 3px 6px;
+    background: transparent;
+    border: none;
+    color: var(--slate-500);
+    font-size: 0.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 150ms ease;
+    border-radius: 3px;
+    font-family: var(--font-body);
+}
+
+.nav-banner-light .lang-switch-btn:hover {
+    color: var(--slate-700);
+}
+
+.nav-banner-light .lang-switch-btn.active {
+    background: var(--navy-700);
+    color: white;
 }
 
 /* Body offset for fixed banner */
 body {
     padding-top: 38px;
-}
-
-/* Mobile adjustments for nav banner */
-@media (max-width: 480px) {
-    .nav-banner {
-        padding: 5px var(--space-md);
-    }
-
-    .nav-banner:not(.nav-banner-light) .nav-banner-btn {
-        padding: 4px 6px;
-        font-size: 0.7rem;
-        gap: 3px;
-    }
-
-    .nav-banner:not(.nav-banner-light) .nav-banner-btn svg {
-        width: 10px;
-        height: 10px;
-    }
-
-    .nav-banner-btn span {
-        display: none;
-    }
-
-    .nav-banner:not(.nav-banner-light) .lang-switch {
-        padding: 2px 4px;
-    }
-
-    .nav-banner:not(.nav-banner-light) .lang-switch-btn {
-        padding: 2px 4px;
-        font-size: 0.65rem;
-    }
 }
     </style>
 </head>
@@ -2342,7 +2333,7 @@ body {
                         <line x1="16" y1="13" x2="8" y2="13"/>
                         <line x1="16" y1="17" x2="8" y2="17"/>
                     </svg>
-                    <span>Resume</span>
+                    <span>简历</span>
                 </a>
                 <a href="#portfolio" class="nav-banner-btn">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -2351,13 +2342,13 @@ body {
                         <rect x="14" y="14" width="7" height="7"/>
                         <rect x="3" y="14" width="7" height="7"/>
                     </svg>
-                    <span>Portfolio</span>
+                    <span>项目展示</span>
                 </a>
             </div>
             <div class="nav-banner-right">
                 <div class="lang-switch">
-                    <button class="lang-switch-btn active">EN</button>
-                    <a href="resume-cn.html" class="lang-switch-btn">CN</a>
+                    <a href="resume.html" class="lang-switch-btn">EN</a>
+                    <button class="lang-switch-btn active">CN</button>
                 </div>
             </div>
         </div>
@@ -2367,7 +2358,7 @@ body {
         <header class="resume-header">
             <div class="header-content">
                 <h1 class="name">Fan Fan</h1>
-                <p class="tagline">PhD-trained Data & AI Leader who turns rigorous modeling into scalable business impact, driving revenue growth, smarter decisions, and continuous improvement through lifelong learning and first-principles thinking.</p>
+                <p class="tagline">博士背景的数据与AI领导者，将严谨建模转化为可扩展的商业价值，推动收入增长、智能决策，并通过终身学习和第一性原理思维实现持续改进。</p>
                 <div class="contact-info">
                     <a href="mailto:mike.fan@foxmail.com" class="contact-item">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -2390,19 +2381,19 @@ body {
         <main class="resume-body">
             <section class="section">
                 <h2 class="section-title">
-                    <span class="title-text">Work Experience</span>
+                    <span class="title-text">工作经历</span>
                     <span class="title-line"></span>
                 </h2>
 
                 <div class="experience-item">
                     <div class="experience-header">
                         <div class="company-info">
-                            <h3 class="company-name">Decathlon (Shanghai) Sports Co., Ltd.</h3>
-                            <p class="position">Data & AI Manager (Data Science Leader)</p>
+                            <h3 class="company-name">迪卡侬（上海）体育用品有限公司</h3>
+                            <p class="position">数据与AI经理（数据科学负责人）</p>
                         </div>
                         <div class="experience-meta">
-                            <span class="date">2022.06 - Present</span>
-                            <span class="location">Shanghai, China</span>
+                            <span class="date">2022.06 - 至今</span>
+                            <span class="location">上海，中国</span>
                         </div>
                     </div>
                     <ul class="achievements">
@@ -2416,7 +2407,7 @@ body {
                             <strong>Model Recommendation:</strong> Built a GPT2-style attention-mechanism product recommendation model for retail teams to support space-constrained small stores which are unable to carry product bundles, achieving 80%+ accuracy across 4 mega cities and driving 2-3% revenue growth for 8 Beijing pilot stores in 2025.
                         </li>
                         <li>
-                            <strong>Member Churn Prediction:</strong> Built a member churn prediction model for the CRM team, identifying 15 key features from purchasing behaviors and optimized from gradient boosting models (72% precision, 30% recall) to ensemble deep learning models, achieving 74% precision and 70% recall for member churn forecasting.
+                            <strong>会员流失预测:</strong> Built a member churn prediction model for the CRM team, identifying 15 key features from purchasing behaviors and optimized from gradient boosting models (72% precision, 30% recall) to ensemble deep learning models, achieving 74% precision and 70% recall for member churn forecasting.
                         </li>
                         <li>
                             <strong>Product Lifetime Cycle Segmentation:</strong> Leveraged ARIMA time-series decomposition, dynamic time warping (DTW) and KMeans clustering on full product sales data to categorize products into three groups with distinct peak sales trends and 2-5-year average lifespans, optimizing product design and launch planning.
@@ -2427,12 +2418,12 @@ body {
                 <div class="experience-item">
                     <div class="experience-header">
                         <div class="company-info">
-                            <h3 class="company-name">PricewaterhouseCoopers (PwC) Consultants Limited</h3>
-                            <p class="position">Manager</p>
+                            <h3 class="company-name">普华永道咨询有限公司</h3>
+                            <p class="position">经理</p>
                         </div>
                         <div class="experience-meta">
                             <span class="date">2018.08 - 2022.01</span>
-                            <span class="location">Shanghai, China</span>
+                            <span class="location">上海，中国</span>
                         </div>
                     </div>
                     <ul class="achievements">
@@ -2440,7 +2431,7 @@ body {
                             <strong>Fault Detection:</strong> Built a decision tree classifier based on impurity decline to analyze parameter impacts on product disqualification, I optimized manufacturing parameters and reduced the disqualification rate from 0.3% to 0.2%.
                         </li>
                         <li>
-                            <strong>Patent Clustering:</strong> Developed a two-dimensional clustering matrix (versatility x complexity) to categorize patents into 4 clusters, enabling compliance with patent-related requirements that reduced corporate income tax rate from 25% to 15%.
+                            <strong>Patent 聚类分析:</strong> Developed a two-dimensional clustering matrix (versatility x complexity) to categorize patents into 4 clusters, enabling compliance with patent-related requirements that reduced corporate income tax rate from 25% to 15%.
                         </li>
                     </ul>
                 </div>
@@ -2448,12 +2439,12 @@ body {
                 <div class="experience-item">
                     <div class="experience-header">
                         <div class="company-info">
-                            <h3 class="company-name">Shanghai Automotive Industry Corporation (SAIC Motor)</h3>
-                            <p class="position">Hydrogen Fuel Cell Development Engineer</p>
+                            <h3 class="company-name">上海汽车集团股份有限公司（上汽集团）</h3>
+                            <p class="position">氢燃料电池开发工程师</p>
                         </div>
                         <div class="experience-meta">
                             <span class="date">2017.07 - 2018.07</span>
-                            <span class="location">Shanghai, China</span>
+                            <span class="location">上海，中国</span>
                         </div>
                     </div>
                     <ul class="achievements">
@@ -2466,20 +2457,20 @@ body {
 
             <section class="section">
                 <h2 class="section-title">
-                    <span class="title-text">Education</span>
+                    <span class="title-text">教育背景</span>
                     <span class="title-line"></span>
                 </h2>
 
                 <div class="education-item">
                     <div class="education-header">
                         <div class="school-info">
-                            <h3 class="school-name">University of Saskatchewan</h3>
-                            <p class="degree">Ph.D. in Mechanical Engineering</p>
-                            <p class="honors">Sponsored by China Scholarship Council (CSC)</p>
+                            <h3 class="school-name">萨斯喀彻温大学</h3>
+                            <p class="degree">机械工程博士</p>
+                            <p class="honors">获国家留学基金委（CSC）资助</p>
                         </div>
                         <div class="education-meta">
                             <span class="date">2013.01 - 2017.01</span>
-                            <span class="location">Saskatoon, Canada</span>
+                            <span class="location">萨斯卡通，加拿大</span>
                         </div>
                     </div>
                 </div>
@@ -2487,12 +2478,12 @@ body {
                 <div class="education-item">
                     <div class="education-header">
                         <div class="school-info">
-                            <h3 class="school-name">Nanjing University of Science and Technology</h3>
-                            <p class="degree">Master in Mechanical and Electronic Engineering</p>
+                            <h3 class="school-name">南京理工大学</h3>
+                            <p class="degree">机械电子工程硕士</p>
                         </div>
                         <div class="education-meta">
                             <span class="date">2010.09 - 2012.10</span>
-                            <span class="location">Nanjing, China</span>
+                            <span class="location">南京，中国</span>
                         </div>
                     </div>
                 </div>
@@ -2500,12 +2491,12 @@ body {
                 <div class="education-item">
                     <div class="education-header">
                         <div class="school-info">
-                            <h3 class="school-name">Nanjing University of Science and Technology</h3>
-                            <p class="degree">Bachelor in Mechanical and Automation</p>
+                            <h3 class="school-name">南京理工大学</h3>
+                            <p class="degree">机械工程及自动化本科</p>
                         </div>
                         <div class="education-meta">
                             <span class="date">2006.09 - 2010.07</span>
-                            <span class="location">Nanjing, China</span>
+                            <span class="location">南京，中国</span>
                         </div>
                     </div>
                 </div>
@@ -2514,26 +2505,26 @@ body {
 
         <footer class="resume-footer">
             <div class="skills-section">
-                <h3 class="skills-title">Core Competencies</h3>
+                <h3 class="skills-title">核心能力</h3>
                 <div class="skills-grid">
-                    <span class="skill-tag">Machine Learning</span>
-                    <span class="skill-tag">Deep Learning</span>
-                    <span class="skill-tag">Recommendation Systems</span>
-                    <span class="skill-tag">Time Series Analysis</span>
-                    <span class="skill-tag">Gradient Boosting</span>
-                    <span class="skill-tag">NLP / Attention Models</span>
-                    <span class="skill-tag">Clustering</span>
+                    <span class="skill-tag">机器学习</span>
+                    <span class="skill-tag">深度学习</span>
+                    <span class="skill-tag">推荐系统</span>
+                    <span class="skill-tag">时间序列分析</span>
+                    <span class="skill-tag">梯度提升</span>
+                    <span class="skill-tag">NLP / Attention模型</span>
+                    <span class="skill-tag">聚类分析</span>
                     <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Data Science</span>
-                    <span class="skill-tag">AI Strategy</span>
+                    <span class="skill-tag">数据科学</span>
+                    <span class="skill-tag">AI战略</span>
                 </div>
             </div>
 
             <div class="portfolio-section" id="portfolio">
-                <h3 class="portfolio-title">Portfolio</h3>
+                <h3 class="portfolio-title">项目展示</h3>
 
                 <div class="portfolio-domain">
-                    <h4 class="domain-title">Store Domain</h4>
+                    <h4 class="domain-title">门店领域</h4>
                     <div class="portfolio-projects">
                         <a href="#site-selection-intelligence" class="portfolio-project">
                             <div class="project-icon">
@@ -2542,8 +2533,8 @@ body {
                                     <circle cx="12" cy="10" r="3"/>
                                 </svg>
                             </div>
-                            <span class="project-name">Site Selection Intelligence</span>
-                            <span class="project-desc">Geospatial ML for store revenue prediction</span>
+                            <span class="project-name">选址智能系统</span>
+                            <span class="project-desc">地理空间ML门店收入预测</span>
                         </a>
                         <a href="#store-layout-efficiency" class="portfolio-project">
                             <div class="project-icon">
@@ -2553,14 +2544,14 @@ body {
                                     <line x1="9" y1="21" x2="9" y2="9"/>
                                 </svg>
                             </div>
-                            <span class="project-name">Store Layout Efficiency</span>
-                            <span class="project-desc">Space optimization web application</span>
+                            <span class="project-name">门店布局效率</span>
+                            <span class="project-desc">空间优化Web应用</span>
                         </a>
                     </div>
                 </div>
 
                 <div class="portfolio-domain">
-                    <h4 class="domain-title">Product Domain</h4>
+                    <h4 class="domain-title">产品领域</h4>
                     <div class="portfolio-projects">
                         <a href="#ai-range-choice" class="portfolio-project">
                             <div class="project-icon">
@@ -2570,8 +2561,8 @@ body {
                                     <line x1="16" y1="6" x2="16" y2="22"/>
                                 </svg>
                             </div>
-                            <span class="project-name">AI Range Choice</span>
-                            <span class="project-desc">Retail assortment optimization system</span>
+                            <span class="project-name">AI品类选择</span>
+                            <span class="project-desc">零售品类优化系统</span>
                         </a>
                         <a href="#smart-model-choice" class="portfolio-project">
                             <div class="project-icon">
@@ -2581,8 +2572,8 @@ body {
                                     <line x1="12" y1="17" x2="12.01" y2="17"/>
                                 </svg>
                             </div>
-                            <span class="project-name">Smart Model Choice</span>
-                            <span class="project-desc">Transformer-based product recommendations</span>
+                            <span class="project-name">智能模型选择</span>
+                            <span class="project-desc">Transformer产品推荐</span>
                         </a>
                         <a href="#product-life-cycle-prediction" class="portfolio-project">
                             <div class="project-icon">
@@ -2590,14 +2581,14 @@ body {
                                     <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
                                 </svg>
                             </div>
-                            <span class="project-name">Product Life Cycle Prediction</span>
-                            <span class="project-desc">Time series lifespan forecasting</span>
+                            <span class="project-name">产品生命周期预测</span>
+                            <span class="project-desc">时间序列生命周期预测</span>
                         </a>
                     </div>
                 </div>
 
                 <div class="portfolio-domain">
-                    <h4 class="domain-title">Customer Domain</h4>
+                    <h4 class="domain-title">顾客领域</h4>
                     <div class="portfolio-projects">
                         <a href="#churn-member-prediction" class="portfolio-project">
                             <div class="project-icon">
@@ -2608,8 +2599,8 @@ body {
                                     <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                                 </svg>
                             </div>
-                            <span class="project-name">Member Churn Prediction</span>
-                            <span class="project-desc">Deep learning for customer retention</span>
+                            <span class="project-name">会员流失预测</span>
+                            <span class="project-desc">深度学习顾客留存</span>
                         </a>
                         <a href="#customer-segmentation" class="portfolio-project">
                             <div class="project-icon">
@@ -2619,14 +2610,14 @@ body {
                                     <circle cx="12" cy="12" r="2"/>
                                 </svg>
                             </div>
-                            <span class="project-name">Customer Segmentation</span>
-                            <span class="project-desc">K-Means clustering for shopper groups</span>
+                            <span class="project-name">顾客细分</span>
+                            <span class="project-desc">K-Means购物者群体聚类</span>
                         </a>
                     </div>
                 </div>
 
                 <div class="portfolio-domain">
-                    <h4 class="domain-title">Personal Interest</h4>
+                    <h4 class="domain-title">个人兴趣</h4>
                     <div class="portfolio-projects">
                         <a href="#stock-value-filter" class="portfolio-project">
                             <div class="project-icon">
@@ -2635,8 +2626,8 @@ body {
                                     <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                                 </svg>
                             </div>
-                            <span class="project-name">Stock Value Filter</span>
-                            <span class="project-desc">Value investing screening tool</span>
+                            <span class="project-name">股票价值筛选</span>
+                            <span class="project-desc">价值投资筛选工具</span>
                         </a>
                     </div>
                 </div>
@@ -2644,35 +2635,35 @@ body {
         </footer>
     </article>
 
-    <!-- === site-selection-intelligence (Store Domain) === -->
+    <!-- === site-selection-intelligence (门店领域) === -->
     <section id="site-selection-intelligence" class="project-section">
 <!-- Navigation Banner -->
     <nav class="nav-banner">
         <div class="nav-banner-inner">
             <div class="nav-banner-left">
-                <a href="resume.html#resume" class="nav-banner-btn">
+                <a href="resume-cn.html#resume" class="nav-banner-btn">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                         <polyline points="14 2 14 8 20 8"/>
                         <line x1="16" y1="13" x2="8" y2="13"/>
                         <line x1="16" y1="17" x2="8" y2="17"/>
                     </svg>
-                    <span>Resume</span>
+                    <span>简历</span>
                 </a>
-                <a href="resume.html#portfolio" class="nav-banner-btn active">
+                <a href="resume-cn.html#portfolio" class="nav-banner-btn active">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <rect x="3" y="3" width="7" height="7"/>
                         <rect x="14" y="3" width="7" height="7"/>
                         <rect x="14" y="14" width="7" height="7"/>
                         <rect x="3" y="14" width="7" height="7"/>
                     </svg>
-                    <span>Portfolio</span>
+                    <span>项目</span>
                 </a>
             </div>
             <div class="nav-banner-right">
                 <div class="lang-switch">
-                    <button class="lang-switch-btn active">EN</button>
-                    <a href="site-selection-intelligence-cn.html" class="lang-switch-btn">CN</a>
+                    <a href="site-selection-intelligence.html" class="lang-switch-btn">EN</a>
+                    <button class="lang-switch-btn active">CN</button>
                 </div>
             </div>
         </div>
@@ -3233,7 +3224,7 @@ body {
                     <div class="tech-item">
                         <div class="tech-icon">📈</div>
                         <div class="tech-name">XGBoost</div>
-                        <div class="tech-version">Gradient Boosting</div>
+                        <div class="tech-version">梯度提升</div>
                     </div>
                     <div class="tech-item">
                         <div class="tech-icon">🐱</div>
@@ -3275,10 +3266,10 @@ body {
         <div class="container">
             <div class="footer-content">
                 <p class="footer-text">
-                    © 2026 Site Selection Intelligence. Built for Decathlon China expansion strategy.
+                    © 2026 选址智能系统. Built for Decathlon China expansion strategy.
                 </p>
                 <div class="footer-links">
-                    <a href="#resume">← Back to Resume</a>
+                    <a href="#resume">← Back to 简历</a>
                     <a href="#site-selection-intelligence-business-value">Impact</a>
                     <a href="#site-selection-intelligence-solution">Solution</a>
                     <a href="#site-selection-intelligence-features">Predictors</a>
@@ -3289,35 +3280,35 @@ body {
     </footer>
     </section>
 
-    <!-- === store-layout-efficiency (Store Domain) === -->
+    <!-- === store-layout-efficiency (门店领域) === -->
     <section id="store-layout-efficiency" class="project-section">
 <!-- Navigation Banner -->
     <nav class="nav-banner">
         <div class="nav-banner-inner">
             <div class="nav-banner-left">
-                <a href="resume.html#resume" class="nav-banner-btn">
+                <a href="resume-cn.html#resume" class="nav-banner-btn">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                         <polyline points="14 2 14 8 20 8"/>
                         <line x1="16" y1="13" x2="8" y2="13"/>
                         <line x1="16" y1="17" x2="8" y2="17"/>
                     </svg>
-                    <span>Resume</span>
+                    <span>简历</span>
                 </a>
-                <a href="resume.html#portfolio" class="nav-banner-btn active">
+                <a href="resume-cn.html#portfolio" class="nav-banner-btn active">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <rect x="3" y="3" width="7" height="7"/>
                         <rect x="14" y="3" width="7" height="7"/>
                         <rect x="14" y="14" width="7" height="7"/>
                         <rect x="3" y="14" width="7" height="7"/>
                     </svg>
-                    <span>Portfolio</span>
+                    <span>项目</span>
                 </a>
             </div>
             <div class="nav-banner-right">
                 <div class="lang-switch">
-                    <button class="lang-switch-btn active">EN</button>
-                    <a href="store-layout-efficiency-cn.html" class="lang-switch-btn">CN</a>
+                    <a href="store-layout-efficiency.html" class="lang-switch-btn">EN</a>
+                    <button class="lang-switch-btn active">CN</button>
                 </div>
             </div>
         </div>
@@ -3537,10 +3528,10 @@ body {
         <div class="container">
             <div class="footer-content">
                 <p class="footer-text">
-                    © 2026 Store Layout Efficiency. Built for Decathlon China.
+                    © 2026 门店布局效率. Built for Decathlon China.
                 </p>
                 <div class="footer-links">
-                    <a href="#resume">← Back to Resume</a>
+                    <a href="#resume">← Back to 简历</a>
                     <a href="#store-layout-efficiency-business-value">Impact</a>
                     <a href="#store-layout-efficiency-approach">Approach</a>
                     <a href="#store-layout-efficiency-tech-stack">Tech</a>
@@ -3550,35 +3541,35 @@ body {
     </footer>
     </section>
 
-    <!-- === ai-range-choice (Product Domain) === -->
+    <!-- === ai-range-choice (产品领域) === -->
     <section id="ai-range-choice" class="project-section">
 <!-- Navigation Banner -->
     <nav class="nav-banner">
         <div class="nav-banner-inner">
             <div class="nav-banner-left">
-                <a href="resume.html#resume" class="nav-banner-btn">
+                <a href="resume-cn.html#resume" class="nav-banner-btn">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                         <polyline points="14 2 14 8 20 8"/>
                         <line x1="16" y1="13" x2="8" y2="13"/>
                         <line x1="16" y1="17" x2="8" y2="17"/>
                     </svg>
-                    <span>Resume</span>
+                    <span>简历</span>
                 </a>
-                <a href="resume.html#portfolio" class="nav-banner-btn active">
+                <a href="resume-cn.html#portfolio" class="nav-banner-btn active">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <rect x="3" y="3" width="7" height="7"/>
                         <rect x="14" y="3" width="7" height="7"/>
                         <rect x="14" y="14" width="7" height="7"/>
                         <rect x="3" y="14" width="7" height="7"/>
                     </svg>
-                    <span>Portfolio</span>
+                    <span>项目</span>
                 </a>
             </div>
             <div class="nav-banner-right">
                 <div class="lang-switch">
-                    <button class="lang-switch-btn active">EN</button>
-                    <a href="ai-range-choice-cn.html" class="lang-switch-btn">CN</a>
+                    <a href="ai-range-choice.html" class="lang-switch-btn">EN</a>
+                    <button class="lang-switch-btn active">CN</button>
                 </div>
             </div>
         </div>
@@ -4163,10 +4154,10 @@ body {
         <div class="container">
             <div class="footer-content">
                 <p class="footer-text">
-                    © 2026 AI Range Choice System. Built for Decathlon China assortment planning optimization.
+                    © 2026 AI品类选择 System. Built for Decathlon China assortment planning optimization.
                 </p>
                 <div class="footer-links">
-                    <a href="#resume">← Back to Resume</a>
+                    <a href="#resume">← Back to 简历</a>
                     <a href="#ai-range-choice-business-value">Business Value</a>
                     <a href="#ai-range-choice-solution">Solution</a>
                     <a href="#ai-range-choice-features">Features</a>
@@ -4177,35 +4168,35 @@ body {
     </footer>
     </section>
 
-    <!-- === smart-model-choice (Product Domain) === -->
+    <!-- === smart-model-choice (产品领域) === -->
     <section id="smart-model-choice" class="project-section">
 <!-- Navigation Banner -->
     <nav class="nav-banner">
         <div class="nav-banner-inner">
             <div class="nav-banner-left">
-                <a href="resume.html#resume" class="nav-banner-btn">
+                <a href="resume-cn.html#resume" class="nav-banner-btn">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                         <polyline points="14 2 14 8 20 8"/>
                         <line x1="16" y1="13" x2="8" y2="13"/>
                         <line x1="16" y1="17" x2="8" y2="17"/>
                     </svg>
-                    <span>Resume</span>
+                    <span>简历</span>
                 </a>
-                <a href="resume.html#portfolio" class="nav-banner-btn active">
+                <a href="resume-cn.html#portfolio" class="nav-banner-btn active">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <rect x="3" y="3" width="7" height="7"/>
                         <rect x="14" y="3" width="7" height="7"/>
                         <rect x="14" y="14" width="7" height="7"/>
                         <rect x="3" y="14" width="7" height="7"/>
                     </svg>
-                    <span>Portfolio</span>
+                    <span>项目</span>
                 </a>
             </div>
             <div class="nav-banner-right">
                 <div class="lang-switch">
-                    <button class="lang-switch-btn active">EN</button>
-                    <a href="smart-model-choice-cn.html" class="lang-switch-btn">CN</a>
+                    <a href="smart-model-choice.html" class="lang-switch-btn">EN</a>
+                    <button class="lang-switch-btn active">CN</button>
                 </div>
             </div>
         </div>
@@ -4214,7 +4205,7 @@ body {
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <span class="hero-badge">Deep Learning · Sequence Modeling · Product Recommendation</span>
+            <span class="hero-badge">深度学习 · Sequence Modeling · Product Recommendation</span>
             <h1 class="hero-title">Smart Model<br>Choice System</h1>
             <p class="hero-subtitle">
                 A transformer-based recommendation engine that predicts optimal product models for customers using purchase sequence modeling and city-specific patterns
@@ -4366,7 +4357,7 @@ body {
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">The Solution</span>
-                    <h2 class="section-title">A Deep Learning Approach</h2>
+                    <h2 class="section-title">A 深度学习 Approach</h2>
                     <p class="section-subtitle">
                         Transformer-based sequence modeling for intelligent product recommendations
                     </p>
@@ -4764,7 +4755,7 @@ body {
                     <div class="tech-item">
                         <div class="tech-icon">🔥</div>
                         <div class="tech-name">PyTorch</div>
-                        <div class="tech-version">Deep Learning</div>
+                        <div class="tech-version">深度学习</div>
                     </div>
                     <div class="tech-item">
                         <div class="tech-icon">📊</div>
@@ -4806,10 +4797,10 @@ body {
         <div class="container">
             <div class="footer-content">
                 <p class="footer-text">
-                    © 2026 Smart Model Choice. Built for Decathlon China product recommendation.
+                    © 2026 智能模型选择. Built for Decathlon China product recommendation.
                 </p>
                 <div class="footer-links">
-                    <a href="#resume">← Back to Resume</a>
+                    <a href="#resume">← Back to 简历</a>
                     <a href="#smart-model-choice-business-value">Impact</a>
                     <a href="#smart-model-choice-solution">Solution</a>
                     <a href="#smart-model-choice-features">Features</a>
@@ -4820,35 +4811,35 @@ body {
     </footer>
     </section>
 
-    <!-- === product-life-cycle-prediction (Product Domain) === -->
+    <!-- === product-life-cycle-prediction (产品领域) === -->
     <section id="product-life-cycle-prediction" class="project-section">
 <!-- Navigation Banner -->
     <nav class="nav-banner">
         <div class="nav-banner-inner">
             <div class="nav-banner-left">
-                <a href="resume.html#resume" class="nav-banner-btn">
+                <a href="resume-cn.html#resume" class="nav-banner-btn">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                         <polyline points="14 2 14 8 20 8"/>
                         <line x1="16" y1="13" x2="8" y2="13"/>
                         <line x1="16" y1="17" x2="8" y2="17"/>
                     </svg>
-                    <span>Resume</span>
+                    <span>简历</span>
                 </a>
-                <a href="resume.html#portfolio" class="nav-banner-btn active">
+                <a href="resume-cn.html#portfolio" class="nav-banner-btn active">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <rect x="3" y="3" width="7" height="7"/>
                         <rect x="14" y="3" width="7" height="7"/>
                         <rect x="14" y="14" width="7" height="7"/>
                         <rect x="3" y="14" width="7" height="7"/>
                     </svg>
-                    <span>Portfolio</span>
+                    <span>项目</span>
                 </a>
             </div>
             <div class="nav-banner-right">
                 <div class="lang-switch">
-                    <button class="lang-switch-btn active">EN</button>
-                    <a href="product-life-cycle-prediction-cn.html" class="lang-switch-btn">CN</a>
+                    <a href="product-life-cycle-prediction.html" class="lang-switch-btn">EN</a>
+                    <button class="lang-switch-btn active">CN</button>
                 </div>
             </div>
         </div>
@@ -4857,7 +4848,7 @@ body {
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <span class="hero-badge">Machine Learning · Product Strategy · Data Science</span>
+            <span class="hero-badge">机器学习 · Product Strategy · 数据科学</span>
             <h1 class="hero-title">Product Life Cycle<br>Prediction System</h1>
             <p class="hero-subtitle">
                 An enterprise-grade ML platform that predicts product lifespan with 84% accuracy, enabling data-driven strategic planning for retail product portfolios
@@ -4925,7 +4916,7 @@ body {
                                 <circle cx="12" cy="12" r="2"/>
                             </svg>
                         </div>
-                        <h3>Portfolio Management</h3>
+                        <h3>项目展示 Management</h3>
                         <p>
                             Segment products by turnover patterns and seasonal behavior, identifying high-performers early and making informed decisions about product line extensions or discontinuations.
                         </p>
@@ -5164,7 +5155,7 @@ body {
                     <div class="pipeline-item">
                         <div class="pipeline-marker"></div>
                         <div class="pipeline-content">
-                            <h4>Step 3: K-means Clustering</h4>
+                            <h4>Step 3: K-means 聚类分析</h4>
                             <p>Segment products using DTW distances and intensity metrics, determine optimal k via elbow analysis</p>
                         </div>
                     </div>
@@ -5472,7 +5463,7 @@ body {
                     <div class="tech-item">
                         <div class="tech-icon">📈</div>
                         <div class="tech-name">XGBoost</div>
-                        <div class="tech-version">Gradient Boosting</div>
+                        <div class="tech-version">梯度提升</div>
                     </div>
                     <div class="tech-item">
                         <div class="tech-icon">⚡</div>
@@ -5514,10 +5505,10 @@ body {
         <div class="container">
             <div class="footer-content">
                 <p class="footer-text">
-                    © 2026 Product Life Cycle Prediction. Built for Decathlon China product strategy.
+                    © 2026 产品生命周期预测. Built for Decathlon China product strategy.
                 </p>
                 <div class="footer-links">
-                    <a href="#resume">← Back to Resume</a>
+                    <a href="#resume">← Back to 简历</a>
                     <a href="#product-life-cycle-prediction-business-value">Impact</a>
                     <a href="#product-life-cycle-prediction-solution">Solution</a>
                     <a href="#product-life-cycle-prediction-results">Results</a>
@@ -5528,35 +5519,35 @@ body {
     </footer>
     </section>
 
-    <!-- === churn-member-prediction (Customer Domain) === -->
+    <!-- === churn-member-prediction (顾客领域) === -->
     <section id="churn-member-prediction" class="project-section">
 <!-- Navigation Banner -->
     <nav class="nav-banner">
         <div class="nav-banner-inner">
             <div class="nav-banner-left">
-                <a href="resume.html#resume" class="nav-banner-btn">
+                <a href="resume-cn.html#resume" class="nav-banner-btn">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                         <polyline points="14 2 14 8 20 8"/>
                         <line x1="16" y1="13" x2="8" y2="13"/>
                         <line x1="16" y1="17" x2="8" y2="17"/>
                     </svg>
-                    <span>Resume</span>
+                    <span>简历</span>
                 </a>
-                <a href="resume.html#portfolio" class="nav-banner-btn active">
+                <a href="resume-cn.html#portfolio" class="nav-banner-btn active">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <rect x="3" y="3" width="7" height="7"/>
                         <rect x="14" y="3" width="7" height="7"/>
                         <rect x="14" y="14" width="7" height="7"/>
                         <rect x="3" y="14" width="7" height="7"/>
                     </svg>
-                    <span>Portfolio</span>
+                    <span>项目</span>
                 </a>
             </div>
             <div class="nav-banner-right">
                 <div class="lang-switch">
-                    <button class="lang-switch-btn active">EN</button>
-                    <a href="churn-member-prediction-cn.html" class="lang-switch-btn">CN</a>
+                    <a href="churn-member-prediction.html" class="lang-switch-btn">EN</a>
+                    <button class="lang-switch-btn active">CN</button>
                 </div>
             </div>
         </div>
@@ -5565,7 +5556,7 @@ body {
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <span class="hero-badge">Machine Learning · Customer Retention · Binary Classification</span>
+            <span class="hero-badge">机器学习 · Customer Retention · Binary Classification</span>
             <h1 class="hero-title">Member Churn<br>Prediction System</h1>
             <p class="hero-subtitle">
                 An enterprise-grade ML platform that identifies at-risk members before they churn, enabling proactive retention strategies and maximizing customer lifetime value
@@ -5734,7 +5725,7 @@ body {
                     <div class="flow-step">
                         <div class="step-number">3</div>
                         <div class="step-content">
-                            <h4>Customer Segmentation</h4>
+                            <h4>顾客细分</h4>
                             <p>K-means clustering identifies natural member groupings based on behavioral similarity, improving model generalization</p>
                         </div>
                     </div>
@@ -5812,7 +5803,7 @@ body {
                             <li><strong>RFM Features:</strong> Recency, Frequency, Monetary</li>
                             <li><strong>Engagement:</strong> Sport activity, workshop</li>
                             <li><strong>Derived:</strong> Ratios, interactions</li>
-                            <li><strong>Clustering:</strong> K-means segments</li>
+                            <li><strong>聚类分析:</strong> K-means segments</li>
                         </ul>
                     </div>
                     <div class="arch-card">
@@ -5890,7 +5881,7 @@ body {
                     <div class="pipeline-item">
                         <div class="pipeline-marker"></div>
                         <div class="pipeline-content">
-                            <h4>Step 3: Customer Segmentation</h4>
+                            <h4>Step 3: 顾客细分</h4>
                             <p>Transform skewed data (PowerTransformer), scale features (MinMaxScaler), find optimal K (KneeLocator), apply K-means clustering</p>
                         </div>
                     </div>
@@ -6103,7 +6094,7 @@ body {
                     <div class="tech-item">
                         <div class="tech-icon">📈</div>
                         <div class="tech-name">XGBoost</div>
-                        <div class="tech-version">Gradient Boosting</div>
+                        <div class="tech-version">梯度提升</div>
                     </div>
                     <div class="tech-item">
                         <div class="tech-icon">⚡</div>
@@ -6145,10 +6136,10 @@ body {
         <div class="container">
             <div class="footer-content">
                 <p class="footer-text">
-                    © 2026 Member Churn Prediction. Built for Decathlon China CRM team.
+                    © 2026 会员流失预测. Built for Decathlon China CRM team.
                 </p>
                 <div class="footer-links">
-                    <a href="#resume">← Back to Resume</a>
+                    <a href="#resume">← Back to 简历</a>
                     <a href="#churn-member-prediction-business-value">Impact</a>
                     <a href="#churn-member-prediction-solution">Solution</a>
                     <a href="#churn-member-prediction-features">Predictors</a>
@@ -6159,35 +6150,35 @@ body {
     </footer>
     </section>
 
-    <!-- === customer-segmentation (Customer Domain) === -->
+    <!-- === customer-segmentation (顾客领域) === -->
     <section id="customer-segmentation" class="project-section">
 <!-- Navigation Banner -->
     <nav class="nav-banner">
         <div class="nav-banner-inner">
             <div class="nav-banner-left">
-                <a href="resume.html#resume" class="nav-banner-btn">
+                <a href="resume-cn.html#resume" class="nav-banner-btn">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                         <polyline points="14 2 14 8 20 8"/>
                         <line x1="16" y1="13" x2="8" y2="13"/>
                         <line x1="16" y1="17" x2="8" y2="17"/>
                     </svg>
-                    <span>Resume</span>
+                    <span>简历</span>
                 </a>
-                <a href="resume.html#portfolio" class="nav-banner-btn active">
+                <a href="resume-cn.html#portfolio" class="nav-banner-btn active">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <rect x="3" y="3" width="7" height="7"/>
                         <rect x="14" y="3" width="7" height="7"/>
                         <rect x="14" y="14" width="7" height="7"/>
                         <rect x="3" y="14" width="7" height="7"/>
                     </svg>
-                    <span>Portfolio</span>
+                    <span>项目</span>
                 </a>
             </div>
             <div class="nav-banner-right">
                 <div class="lang-switch">
-                    <button class="lang-switch-btn active">EN</button>
-                    <a href="customer-segmentation-cn.html" class="lang-switch-btn">CN</a>
+                    <a href="customer-segmentation.html" class="lang-switch-btn">EN</a>
+                    <button class="lang-switch-btn active">CN</button>
                 </div>
             </div>
         </div>
@@ -6196,7 +6187,7 @@ body {
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <span class="hero-badge">Customer Analytics · K-Means Clustering · Business Intelligence</span>
+            <span class="hero-badge">Customer Analytics · K-Means 聚类分析 · Business Intelligence</span>
             <h1 class="hero-title">Customer<br>Segmentation</h1>
             <p class="hero-subtitle">
                 A customer segmentation platform that identifies distinct shopper groups using K-Means clustering to enable targeted marketing and personalized experiences
@@ -6307,7 +6298,7 @@ body {
                         </ul>
                     </div>
                     <div class="challenge-visual">
-                        <h4 class="visual-title">Customer Segmentation Clusters</h4>
+                        <h4 class="visual-title">顾客细分 Clusters</h4>
                         <div class="pareto-diagram">
                             <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
                                 <!-- Cluster circles -->
@@ -6352,7 +6343,7 @@ body {
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">The Solution</span>
-                    <h2 class="section-title">A Machine Learning Approach</h2>
+                    <h2 class="section-title">A 机器学习 Approach</h2>
                     <p class="section-subtitle">
                         K-Means clustering with PCA dimensionality reduction for customer segmentation
                     </p>
@@ -6389,7 +6380,7 @@ body {
                     <div class="flow-step">
                         <div class="step-number">5</div>
                         <div class="step-content">
-                            <h4>K-Means Clustering</h4>
+                            <h4>K-Means 聚类分析</h4>
                             <p>Find optimal K using elbow method and silhouette scores, run K-Means with 1000 iterations for convergence</p>
                         </div>
                     </div>
@@ -6457,7 +6448,7 @@ body {
                                     <circle cx="12" cy="12" r="4"/>
                                 </svg>
                             </div>
-                            <h4>Clustering Engine</h4>
+                            <h4>聚类分析 Engine</h4>
                         </div>
                         <ul class="arch-list">
                             <li><strong>Algorithm:</strong> K-Means</li>
@@ -6724,10 +6715,10 @@ body {
         <div class="container">
             <div class="footer-content">
                 <p class="footer-text">
-                    © 2026 Customer Segmentation. Built for Decathlon China customer intelligence.
+                    © 2026 顾客细分. Built for Decathlon China customer intelligence.
                 </p>
                 <div class="footer-links">
-                    <a href="#resume">← Back to Resume</a>
+                    <a href="#resume">← Back to 简历</a>
                     <a href="#customer-segmentation-business-value">Impact</a>
                     <a href="#customer-segmentation-solution">Solution</a>
                     <a href="#customer-segmentation-features">Features</a>
@@ -6738,35 +6729,35 @@ body {
     </footer>
     </section>
 
-    <!-- === stock-value-filter (Personal Interest) === -->
+    <!-- === stock-value-filter (个人兴趣) === -->
     <section id="stock-value-filter" class="project-section">
 <!-- Navigation Banner -->
     <nav class="nav-banner">
         <div class="nav-banner-inner">
             <div class="nav-banner-left">
-                <a href="resume.html#resume" class="nav-banner-btn">
+                <a href="resume-cn.html#resume" class="nav-banner-btn">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                         <polyline points="14 2 14 8 20 8"/>
                         <line x1="16" y1="13" x2="8" y2="13"/>
                         <line x1="16" y1="17" x2="8" y2="17"/>
                     </svg>
-                    <span>Resume</span>
+                    <span>简历</span>
                 </a>
-                <a href="resume.html#portfolio" class="nav-banner-btn active">
+                <a href="resume-cn.html#portfolio" class="nav-banner-btn active">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <rect x="3" y="3" width="7" height="7"/>
                         <rect x="14" y="3" width="7" height="7"/>
                         <rect x="14" y="14" width="7" height="7"/>
                         <rect x="3" y="14" width="7" height="7"/>
                     </svg>
-                    <span>Portfolio</span>
+                    <span>项目</span>
                 </a>
             </div>
             <div class="nav-banner-right">
                 <div class="lang-switch">
-                    <button class="lang-switch-btn active">EN</button>
-                    <a href="stock-value-filter-cn.html" class="lang-switch-btn">CN</a>
+                    <a href="stock-value-filter.html" class="lang-switch-btn">EN</a>
+                    <button class="lang-switch-btn active">CN</button>
                 </div>
             </div>
         </div>
@@ -6950,10 +6941,10 @@ body {
         <div class="container">
             <div class="footer-content">
                 <p class="footer-text">
-                    © 2026 Stock Value Filter. Personal investment analysis project.
+                    © 2026 股票价值筛选. Personal investment analysis project.
                 </p>
                 <div class="footer-links">
-                    <a href="#resume">← Back to Resume</a>
+                    <a href="#resume">← Back to 简历</a>
                     <a href="#stock-value-filter-framework">Framework</a>
                     <a href="#stock-value-filter-pipeline">Pipeline</a>
                     <a href="#stock-value-filter-tech-stack">Tech</a>
