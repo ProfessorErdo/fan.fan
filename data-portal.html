@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Portal | Portfolio Project</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Banner -->
+    <nav class="nav-banner">
+        <div class="nav-banner-inner">
+            <div class="nav-banner-left">
+                <a href="resume.html#resume" class="nav-banner-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                    </svg>
+                    <span>Resume</span>
+                </a>
+                <a href="resume.html#portfolio" class="nav-banner-btn active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"/>
+                        <rect x="14" y="3" width="7" height="7"/>
+                        <rect x="14" y="14" width="7" height="7"/>
+                        <rect x="3" y="14" width="7" height="7"/>
+                    </svg>
+                    <span>Portfolio</span>
+                </a>
+            </div>
+            <div class="nav-banner-right">
+                <div class="lang-switch">
+                    <button class="lang-switch-btn active">EN</button>
+                    <a href="data-portal-cn.html" class="lang-switch-btn">CN</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Data Platform · AI Gateway · Plugin Architecture</span>
+            <h1 class="hero-title">Data Portal</h1>
+            <p class="hero-subtitle">
+                A unified gateway providing natural language access to data analytics tools, powered by LLM intelligence and modular plugin architecture
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">6</span>
+                    <span class="stat-label">Key Features</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">6</span>
+                    <span class="stat-label">Tech Categories</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">AI</span>
+                    <span class="stat-label">LLM Core</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-accent"></div>
+    </header>
+
+    <main>
+        <!-- Architecture Section -->
+        <section id="architecture" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">System Design</span>
+                    <h2 class="section-title">Modular Architecture</h2>
+                    <p class="section-subtitle">
+                        Built on a monorepo with plugin-based modules, orchestrated by a central gateway for seamless service discovery and routing
+                    </p>
+                </div>
+                <div class="value-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                        </div>
+                        <h3>Core Gateway</h3>
+                        <p>Central reverse proxy with automatic service registry, JWT authentication, and unified routing to all modules.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                        </div>
+                        <h3>Plugin Modules</h3>
+                        <p>Independently deployable tools that auto-register via manifest files. Add capabilities without gateway changes.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Design System</h3>
+                        <p>Shared CSS tokens, components, and typography ensuring consistent UX across all modules.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <h3>AI Core</h3>
+                        <p>LLM streaming agent with async SSE responses, tool orchestration, and multi-provider API support.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                            </svg>
+                        </div>
+                        <h3>Portal Home</h3>
+                        <p>Vue 3 dashboard displaying all registered tools with real-time status indicators and health checks.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                            </svg>
+                        </div>
+                        <h3>Cloud Integration</h3>
+                        <p>ODPS/MaxCompute data lake connectivity, S3 sync, and Alibaba Cloud DashScope LLM APIs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Capabilities</span>
+                    <h2 class="section-title">Key Features</h2>
+                    <p class="section-subtitle">
+                        Engineered with modern patterns for scalability, performance, and developer experience
+                    </p>
+                </div>
+                <div class="value-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                        </div>
+                        <h3>Unified Gateway</h3>
+                        <p>Single entry point orchestrating multiple data tool modules with automatic service discovery and reverse proxy routing.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </div>
+                        <h3>AI Chat Assistant</h3>
+                        <p>Natural language interface for data queries powered by LLM with streaming responses and intelligent tool orchestration.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                            </svg>
+                        </div>
+                        <h3>Plugin Architecture</h3>
+                        <p>Manifest-based module registration allows dynamic addition/removal of tools without modifying gateway code.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                            </svg>
+                        </div>
+                        <h3>Async Job Processing</h3>
+                        <p>Long-running analyses return immediately with job IDs. Clients poll for progress with real-time status tracking.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Shared Design System</h3>
+                        <p>Centralized CSS tokens with OKLCH colors, Space Grotesk + DM Sans typography, and reusable component library.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                                <line x1="6" y1="6" x2="6.01" y2="6"/>
+                                <line x1="6" y1="18" x2="6.01" y2="18"/>
+                            </svg>
+                        </div>
+                        <h3>Port-Based Isolation</h3>
+                        <p>Each module runs on dedicated ports enabling independent development, testing, and horizontal scaling.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modules Section -->
+        <section id="modules" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Tool Modules</span>
+                    <h2 class="section-title">Built-in Capabilities</h2>
+                    <p class="section-subtitle">
+                        Production-ready modules demonstrating the platform's extensibility and real-world utility
+                    </p>
+                </div>
+                <div class="value-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="value-card" style="grid-column: span 1;">
+                        <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--navy-700); margin-bottom: var(--space-md);">💬 Ask Jason</h3>
+                        <p style="font-size: 0.9rem; color: var(--slate-500); margin-bottom: var(--space-md);">AI-powered natural language data query assistant</p>
+                        <ul class="achievements">
+                            <li>Streaming chat responses via Server-Sent Events</li>
+                            <li>Intelligent tool orchestration and invocation</li>
+                            <li>Conversation history with context retention</li>
+                            <li>Sidebar showing registered tools with live status</li>
+                            <li>Dual LLM provider support (Ollama + DashScope)</li>
+                        </ul>
+                    </div>
+                    <div class="value-card" style="grid-column: span 1;">
+                        <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--navy-700); margin-bottom: var(--space-md);">🛒 Cross-Selling by Ticket</h3>
+                        <p style="font-size: 0.9rem; color: var(--slate-500); margin-bottom: var(--space-md);">Market basket analysis for product co-occurrence patterns</p>
+                        <ul class="achievements">
+                            <li>Top-N best sellers analysis from ODPS data lake</li>
+                            <li>Custom CSV upload support for flexible datasets</li>
+                            <li>Real-time progress tracking with job IDs</li>
+                            <li>CSV and JSON export for downstream analysis</li>
+                            <li>Co-occurrence matrix computation at scale</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech-stack" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Technology</span>
+                    <h2 class="section-title">Tech Stack</h2>
+                    <p class="section-subtitle">
+                        Modern, battle-tested technologies chosen for performance and developer experience
+                    </p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">🐍</div>
+                        <div class="tech-name">Python 3.12+</div>
+                        <div class="tech-version">Core Language</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">⚡</div>
+                        <div class="tech-name">FastAPI</div>
+                        <div class="tech-version">Backend Framework</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🟢</div>
+                        <div class="tech-name">Vue 3</div>
+                        <div class="tech-version">Frontend</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🤖</div>
+                        <div class="tech-name">Ollama</div>
+                        <div class="tech-version">LLM API</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">☁️</div>
+                        <div class="tech-name">DashScope</div>
+                        <div class="tech-version">Aliyun Qwen</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🗄️</div>
+                        <div class="tech-name">ODPS</div>
+                        <div class="tech-version">MaxCompute</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔒</div>
+                        <div class="tech-name">JWT</div>
+                        <div class="tech-version">Security</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🐳</div>
+                        <div class="tech-name">Docker</div>
+                        <div class="tech-version">Infrastructure</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    © 2026 Data Portal. Built for Data Team.
+                </p>
+                <div class="footer-links">
+                    <a href="resume.html">← Back to Resume</a>
+                    <a href="#architecture">Architecture</a>
+                    <a href="#features">Features</a>
+                    <a href="#modules">Modules</a>
+                    <a href="#tech-stack">Tech</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

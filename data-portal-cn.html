@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据门户 | 项目案例</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Banner -->
+    <nav class="nav-banner">
+        <div class="nav-banner-inner">
+            <div class="nav-banner-left">
+                <a href="resume-cn.html#resume" class="nav-banner-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                    </svg>
+                    <span>简历</span>
+                </a>
+                <a href="resume-cn.html#portfolio" class="nav-banner-btn active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"/>
+                        <rect x="14" y="3" width="7" height="7"/>
+                        <rect x="14" y="14" width="7" height="7"/>
+                        <rect x="3" y="14" width="7" height="7"/>
+                    </svg>
+                    <span>项目</span>
+                </a>
+            </div>
+            <div class="nav-banner-right">
+                <div class="lang-switch">
+                    <a href="data-portal.html" class="lang-switch-btn">EN</a>
+                    <button class="lang-switch-btn active">CN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">数据平台 · AI网关 · 插件架构</span>
+            <h1 class="hero-title">数据门户</h1>
+            <p class="hero-subtitle">
+                统一网关，通过自然语言访问数据分析工具，由LLM智能和模块化插件架构驱动
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">6</span>
+                    <span class="stat-label">核心功能</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">6</span>
+                    <span class="stat-label">技术类别</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">AI</span>
+                    <span class="stat-label">LLM核心</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-accent"></div>
+    </header>
+
+    <main>
+        <!-- 技术架构 -->
+        <section id="architecture" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">系统设计</span>
+                    <h2 class="section-title">模块化架构</h2>
+                    <p class="section-subtitle">
+                        基于插件化模块的单体仓库架构，由中央网关协调实现无缝服务发现和路由
+                    </p>
+                </div>
+                <div class="value-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                        </div>
+                        <h3>核心网关</h3>
+                        <p>中央反向代理，具备自动服务注册、JWT认证和统一的模块路由。</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                        </div>
+                        <h3>插件模块</h3>
+                        <p>可独立部署的工具，通过清单文件自动注册。无需修改网关即可添加功能。</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>设计系统</h3>
+                        <p>共享CSS令牌、组件和排版，确保所有模块的一致用户体验。</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <h3>AI核心</h3>
+                        <p>LLM流式代理，支持异步SSE响应、工具编排和多提供商API。</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                            </svg>
+                        </div>
+                        <h3>门户首页</h3>
+                        <p>Vue 3仪表板，显示所有注册工具，带实时状态指示器与健康检查。</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                            </svg>
+                        </div>
+                        <h3>云集成</h3>
+                        <p>ODPS/MaxCompute数据湖连接、S3同步和阿里云DashScope LLM API。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心功能 -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">能力</span>
+                    <h2 class="section-title">核心功能</h2>
+                    <p class="section-subtitle">
+                        采用现代模式设计，实现可扩展性、高性能和优秀的开发者体验
+                    </p>
+                </div>
+                <div class="value-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                        </div>
+                        <h3>统一网关</h3>
+                        <p>单入口点协调多个数据工具模块，具备自动服务发现和反向代理路由。</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </div>
+                        <h3>AI聊天助手</h3>
+                        <p>由LLM驱动的自然语言数据查询界面，支持流式响应和智能工具编排。</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                            </svg>
+                        </div>
+                        <h3>插件架构</h3>
+                        <p>基于清单的模块注册，允许动态添加/删除工具，无需修改网关代码。</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                            </svg>
+                        </div>
+                        <h3>异步任务处理</h3>
+                        <p>长时间运行的分析任务带作业ID和实时进度跟踪。</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>共享设计系统</h3>
+                        <p>集中式CSS令牌，OKLCH颜色，Space Grotesk + DM Sans排版，可复用组件库。</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                                <line x1="6" y1="6" x2="6.01" y2="6"/>
+                                <line x1="6" y1="18" x2="6.01" y2="18"/>
+                            </svg>
+                        </div>
+                        <h3>端口隔离</h3>
+                        <p>每个模块在专用端口上运行，支持独立开发、测试和水平扩展。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 模块功能 -->
+        <section id="modules" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">工具模块</span>
+                    <h2 class="section-title">内置功能</h2>
+                    <p class="section-subtitle">
+                        展示平台可扩展性和实际效用的生产就绪模块
+                    </p>
+                </div>
+                <div class="value-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="value-card" style="grid-column: span 1;">
+                        <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--navy-700); margin-bottom: var(--space-md);">💬 问问杰森</h3>
+                        <p style="font-size: 0.9rem; color: var(--slate-500); margin-bottom: var(--space-md);">AI驱动的自然语言数据查询助手</p>
+                        <ul class="achievements">
+                            <li>通过SSE流式聊天响应</li>
+                            <li>智能工具编排与调用</li>
+                            <li>带上下文保留的对话历史</li>
+                            <li>侧边栏显示注册工具实时状态</li>
+                            <li>双LLM提供商支持（Ollama + DashScope）</li>
+                        </ul>
+                    </div>
+                    <div class="value-card" style="grid-column: span 1;">
+                        <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--navy-700); margin-bottom: var(--space-md);">🛒 连带购买分析</h3>
+                        <p style="font-size: 0.9rem; color: var(--slate-500); margin-bottom: var(--space-md);">产品共现模式的市场购物篮分析</p>
+                        <ul class="achievements">
+                            <li>ODPS数据湖Top-N畅销品分析</li>
+                            <li>自定义CSV上传支持灵活数据集</li>
+                            <li>带作业ID的实时进度跟踪</li>
+                            <li>CSV和JSON导出用于下游分析</li>
+                            <li>大规模共现矩阵计算</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技术栈 -->
+        <section id="tech-stack" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">技术</span>
+                    <h2 class="section-title">技术栈</h2>
+                    <p class="section-subtitle">
+                        现代、经过实战验证的技术选型，注重性能和开发者体验
+                    </p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">🐍</div>
+                        <div class="tech-name">Python 3.12+</div>
+                        <div class="tech-version">核心语言</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">⚡</div>
+                        <div class="tech-name">FastAPI</div>
+                        <div class="tech-version">后端框架</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🟢</div>
+                        <div class="tech-name">Vue 3</div>
+                        <div class="tech-version">前端</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🤖</div>
+                        <div class="tech-name">Ollama</div>
+                        <div class="tech-version">LLM API</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">☁️</div>
+                        <div class="tech-name">DashScope</div>
+                        <div class="tech-version">阿里云通义</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🗄️</div>
+                        <div class="tech-name">ODPS</div>
+                        <div class="tech-version">MaxCompute</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔒</div>
+                        <div class="tech-name">JWT</div>
+                        <div class="tech-version">安全</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🐳</div>
+                        <div class="tech-name">Docker</div>
+                        <div class="tech-version">基础设施</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    © 2026 数据门户. 为数据团队构建.
+                </p>
+                <div class="footer-links">
+                    <a href="resume-cn.html">← 返回简历</a>
+                    <a href="#architecture">架构</a>
+                    <a href="#features">功能</a>
+                    <a href="#modules">模块</a>
+                    <a href="#tech-stack">技术</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
