@@ -677,19 +677,19 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 6px var(--space-xl);
+    padding: 10px var(--space-xl);
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 /* Dark banner for project pages (default) */
 .nav-banner:not(.nav-banner-light) {
-    background: rgba(20, 29, 43, 0.92);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(201, 169, 98, 0.3);
+    background: linear-gradient(180deg, var(--navy-800) 0%, var(--navy-700) 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid var(--gold-500);
 }
 
 /* Light banner for resume pages */
@@ -710,7 +710,7 @@ body {
 .nav-banner-left {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: var(--space-sm);
 }
 
 .nav-banner-right {
@@ -718,39 +718,36 @@ body {
     align-items: center;
 }
 
-/* Dark banner buttons (project pages) - refined */
+/* Dark banner buttons (project pages) */
 .nav-banner:not(.nav-banner-light) .nav-banner-btn {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    padding: 5px 10px;
+    gap: 6px;
+    padding: 8px 16px;
     background: transparent;
-    border: 1px solid rgba(201, 169, 98, 0.25);
-    color: rgba(201, 169, 98, 0.7);
-    font-size: 0.75rem;
-    font-weight: 400;
+    border: 1px solid rgba(201, 169, 98, 0.4);
+    color: var(--gold-400);
+    font-size: 0.85rem;
+    font-weight: 500;
     text-decoration: none;
-    border-radius: 4px;
-    transition: all 150ms ease;
+    border-radius: 6px;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     font-family: var(--font-body);
 }
 
 .nav-banner:not(.nav-banner-light) .nav-banner-btn:hover {
-    background: rgba(201, 169, 98, 0.08);
-    border-color: rgba(201, 169, 98, 0.4);
-    color: var(--gold-400);
+    background: rgba(201, 169, 98, 0.12);
+    border-color: var(--gold-500);
+    color: var(--gold-300);
+    transform: translateY(-1px);
 }
 
 .nav-banner:not(.nav-banner-light) .nav-banner-btn.active {
-    background: rgba(201, 169, 98, 0.15);
-    color: var(--gold-400);
-    border-color: rgba(201, 169, 98, 0.5);
-    box-shadow: none;
-}
-
-.nav-banner:not(.nav-banner-light) .nav-banner-btn.active:hover {
-    background: rgba(201, 169, 98, 0.2);
+    background: linear-gradient(135deg, var(--gold-500) 0%, var(--gold-400) 100%);
+    color: var(--navy-800);
+    border-color: var(--gold-500);
+    box-shadow: 0 2px 8px rgba(201, 169, 98, 0.3);
 }
 
 /* Light banner buttons (resume pages) - more subtle */
@@ -796,14 +793,7 @@ body {
     transform: translateY(0);
 }
 
-.nav-banner:not(.nav-banner-light) .nav-banner-btn svg {
-    width: 12px;
-    height: 12px;
-    stroke: currentColor;
-    flex-shrink: 0;
-}
-
-.nav-banner-light .nav-banner-btn svg {
+.nav-banner-btn svg {
     width: 14px;
     height: 14px;
     stroke: currentColor;
@@ -814,20 +804,20 @@ body {
 .nav-banner:not(.nav-banner-light) .lang-switch {
     display: flex;
     align-items: center;
-    gap: 1px;
-    padding: 3px 6px;
-    background: rgba(201, 169, 98, 0.06);
-    border: 1px solid rgba(201, 169, 98, 0.2);
-    border-radius: 3px;
+    gap: 2px;
+    padding: 4px 8px;
+    background: rgba(201, 169, 98, 0.08);
+    border: 1px solid rgba(201, 169, 98, 0.25);
+    border-radius: 4px;
 }
 
 .nav-banner:not(.nav-banner-light) .lang-switch-btn {
-    padding: 2px 6px;
+    padding: 3px 8px;
     background: transparent;
     border: none;
-    color: rgba(148, 163, 184, 0.7);
-    font-size: 0.7rem;
-    font-weight: 500;
+    color: var(--slate-400);
+    font-size: 0.75rem;
+    font-weight: 600;
     cursor: pointer;
     transition: all 150ms ease;
     border-radius: 3px;
@@ -837,12 +827,12 @@ body {
 
 .nav-banner:not(.nav-banner-light) .lang-switch-btn:hover {
     color: var(--gold-400);
-    background: rgba(201, 169, 98, 0.08);
+    background: rgba(201, 169, 98, 0.1);
 }
 
 .nav-banner:not(.nav-banner-light) .lang-switch-btn.active {
-    background: rgba(201, 169, 98, 0.2);
-    color: var(--gold-400);
+    background: var(--gold-500);
+    color: var(--navy-800);
 }
 
 /* Language Switch - Light (resume pages) */
@@ -887,37 +877,36 @@ body {
 
 /* Body offset for fixed banner */
 body {
-    padding-top: 38px;
+    padding-top: 52px;
 }
 
 /* Mobile adjustments for nav banner */
 @media (max-width: 480px) {
     .nav-banner {
-        padding: 5px var(--space-md);
+        padding: 8px var(--space-md);
     }
-
-    .nav-banner:not(.nav-banner-light) .nav-banner-btn {
-        padding: 4px 6px;
-        font-size: 0.7rem;
-        gap: 3px;
+    
+    .nav-banner-btn {
+        padding: 5px 8px;
+        font-size: 0.75rem;
     }
-
-    .nav-banner:not(.nav-banner-light) .nav-banner-btn svg {
-        width: 10px;
-        height: 10px;
+    
+    .nav-banner-btn svg {
+        width: 12px;
+        height: 12px;
     }
-
+    
     .nav-banner-btn span {
         display: none;
     }
-
-    .nav-banner:not(.nav-banner-light) .lang-switch {
-        padding: 2px 4px;
+    
+    .lang-switch {
+        padding: 3px 6px;
     }
-
-    .nav-banner:not(.nav-banner-light) .lang-switch-btn {
-        padding: 2px 4px;
-        font-size: 0.65rem;
+    
+    .lang-switch-btn {
+        padding: 3px 6px;
+        font-size: 0.7rem;
     }
 }
 
@@ -2172,15 +2161,15 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: linear-gradient(180deg, var(--navy-800) 0%, var(--navy-700) 100%);
-    padding: 10px var(--space-xl);
+    background: rgba(20, 29, 43, 0.92);
+    padding: 6px var(--space-xl);
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-bottom: 2px solid var(--gold-500);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(201, 169, 98, 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .nav-banner-inner {
@@ -2194,7 +2183,7 @@ body {
 .nav-banner-left {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
+    gap: 6px;
 }
 
 .nav-banner-right {
@@ -2205,25 +2194,24 @@ body {
 .nav-banner-btn {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 8px 16px;
+    gap: 4px;
+    padding: 5px 10px;
     background: transparent;
-    border: 1px solid rgba(201, 169, 98, 0.4);
-    color: var(--gold-400);
-    font-size: 0.85rem;
-    font-weight: 500;
+    border: 1px solid rgba(201, 169, 98, 0.25);
+    color: rgba(201, 169, 98, 0.7);
+    font-size: 0.75rem;
+    font-weight: 400;
     text-decoration: none;
-    border-radius: 6px;
-    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 4px;
+    transition: all 150ms ease;
     cursor: pointer;
     font-family: var(--font-body);
 }
 
 .nav-banner-btn:hover {
-    background: rgba(201, 169, 98, 0.12);
-    border-color: var(--gold-500);
-    color: var(--gold-300);
-    transform: translateY(-1px);
+    background: rgba(201, 169, 98, 0.08);
+    border-color: rgba(201, 169, 98, 0.4);
+    color: var(--gold-400);
 }
 
 .nav-banner-btn:focus-visible {
@@ -2236,19 +2224,19 @@ body {
 }
 
 .nav-banner-btn.active {
-    background: linear-gradient(135deg, var(--gold-500) 0%, var(--gold-400) 100%);
-    color: var(--navy-800);
-    border-color: var(--gold-500);
-    box-shadow: 0 2px 8px rgba(201, 169, 98, 0.3);
+    background: rgba(201, 169, 98, 0.15);
+    color: var(--gold-400);
+    border-color: rgba(201, 169, 98, 0.5);
+    box-shadow: none;
 }
 
 .nav-banner-btn.active:hover {
-    background: linear-gradient(135deg, var(--gold-400) 0%, var(--gold-300) 100%);
+    background: rgba(201, 169, 98, 0.2);
 }
 
 .nav-banner-btn svg {
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     stroke: currentColor;
     flex-shrink: 0;
 }
@@ -2257,30 +2245,30 @@ body {
 .lang-switch {
     display: flex;
     align-items: center;
-    gap: 2px;
-    padding: 4px 8px;
-    background: rgba(201, 169, 98, 0.08);
-    border: 1px solid rgba(201, 169, 98, 0.25);
-    border-radius: 4px;
+    gap: 1px;
+    padding: 3px 6px;
+    background: rgba(201, 169, 98, 0.06);
+    border: 1px solid rgba(201, 169, 98, 0.2);
+    border-radius: 3px;
 }
 
 .lang-switch-btn {
-    padding: 3px 8px;
+    padding: 2px 6px;
     background: transparent;
     border: none;
-    color: var(--slate-400);
-    font-size: 0.75rem;
-    font-weight: 600;
+    color: rgba(148, 163, 184, 0.7);
+    font-size: 0.7rem;
+    font-weight: 500;
     cursor: pointer;
     transition: all 150ms ease;
-    border-radius: 3px;
+    border-radius: 2px;
     text-decoration: none;
     font-family: var(--font-body);
 }
 
 .lang-switch-btn:hover {
     color: var(--gold-400);
-    background: rgba(201, 169, 98, 0.1);
+    background: rgba(201, 169, 98, 0.08);
 }
 
 .lang-switch-btn:focus-visible {
@@ -2289,8 +2277,8 @@ body {
 }
 
 .lang-switch-btn.active {
-    background: var(--gold-500);
-    color: var(--navy-800);
+    background: rgba(201, 169, 98, 0.2);
+    color: var(--gold-400);
 }
 
 /* Body offset for fixed banner */
@@ -2303,27 +2291,27 @@ body {
     .nav-banner {
         padding: 5px var(--space-md);
     }
-
-    .nav-banner:not(.nav-banner-light) .nav-banner-btn {
+    
+    .nav-banner-btn {
         padding: 4px 6px;
         font-size: 0.7rem;
         gap: 3px;
     }
-
-    .nav-banner:not(.nav-banner-light) .nav-banner-btn svg {
+    
+    .nav-banner-btn svg {
         width: 10px;
         height: 10px;
     }
-
+    
     .nav-banner-btn span {
         display: none;
     }
-
-    .nav-banner:not(.nav-banner-light) .lang-switch {
+    
+    .lang-switch {
         padding: 2px 4px;
     }
-
-    .nav-banner:not(.nav-banner-light) .lang-switch-btn {
+    
+    .lang-switch-btn {
         padding: 2px 4px;
         font-size: 0.65rem;
     }
@@ -2555,6 +2543,17 @@ body {
                             </div>
                             <span class="project-name">Store Layout Efficiency</span>
                             <span class="project-desc">Space optimization web application</span>
+                        </a>
+                        <a href="store-cannibalization-analysis.html" class="portfolio-project">
+                            <div class="project-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <circle cx="12" cy="12" r="6"/>
+                                    <circle cx="12" cy="12" r="2"/>
+                                </svg>
+                            </div>
+                            <span class="project-name">Store Cannibalization Analysis</span>
+                            <span class="project-desc">Customer behavior impact analysis</span>
                         </a>
                     </div>
                 </div>
